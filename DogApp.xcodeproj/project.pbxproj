@@ -53,6 +53,9 @@
 		F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BB591AE0214E005B873C /* placeholder.png */; };
 		F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB5C1AE023B8005B873C /* ForumTopicsTableViewController.m */; };
 		F9A6BB601AE023DC005B873C /* ForumTopicsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB5F1AE023DC005B873C /* ForumTopicsTableViewCell.m */; };
+		F9FB5A1B1AE13D7100CA24EE /* ResponsesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A1A1AE13D7100CA24EE /* ResponsesTableViewController.m */; };
+		F9FB5A1E1AE13D8300CA24EE /* ResponsesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A1D1AE13D8300CA24EE /* ResponsesTableViewCell.m */; };
+		F9FB5A211AE13DB700CA24EE /* AddResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,12 @@
 		F9A6BB5C1AE023B8005B873C /* ForumTopicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForumTopicsTableViewController.m; path = ../ForumTopicsTableViewController.m; sourceTree = "<group>"; };
 		F9A6BB5E1AE023DC005B873C /* ForumTopicsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForumTopicsTableViewCell.h; path = ../ForumTopicsTableViewCell.h; sourceTree = "<group>"; };
 		F9A6BB5F1AE023DC005B873C /* ForumTopicsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForumTopicsTableViewCell.m; path = ../ForumTopicsTableViewCell.m; sourceTree = "<group>"; };
+		F9FB5A191AE13D7100CA24EE /* ResponsesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponsesTableViewController.h; path = ../ResponsesTableViewController.h; sourceTree = "<group>"; };
+		F9FB5A1A1AE13D7100CA24EE /* ResponsesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponsesTableViewController.m; path = ../ResponsesTableViewController.m; sourceTree = "<group>"; };
+		F9FB5A1C1AE13D8300CA24EE /* ResponsesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponsesTableViewCell.h; path = ../ResponsesTableViewCell.h; sourceTree = "<group>"; };
+		F9FB5A1D1AE13D8300CA24EE /* ResponsesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponsesTableViewCell.m; path = ../ResponsesTableViewCell.m; sourceTree = "<group>"; };
+		F9FB5A1F1AE13DB700CA24EE /* AddResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddResponseViewController.h; path = ../AddResponseViewController.h; sourceTree = "<group>"; };
+		F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddResponseViewController.m; path = ../AddResponseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +195,12 @@
 		F929F8071ADDA81700C8BE7F /* DogApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9FB5A1F1AE13DB700CA24EE /* AddResponseViewController.h */,
+				F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */,
+				F9FB5A1C1AE13D8300CA24EE /* ResponsesTableViewCell.h */,
+				F9FB5A1D1AE13D8300CA24EE /* ResponsesTableViewCell.m */,
+				F9FB5A191AE13D7100CA24EE /* ResponsesTableViewController.h */,
+				F9FB5A1A1AE13D7100CA24EE /* ResponsesTableViewController.m */,
 				F91FE0131AE0555E00DC1438 /* AddDiscussionViewController.h */,
 				F91FE0141AE0555E00DC1438 /* AddDiscussionViewController.m */,
 				F91FE0101AE04AB100DC1438 /* DiscussionsTableViewCell.h */,
@@ -396,7 +411,10 @@
 				F91FE00F1AE04A9D00DC1438 /* DiscussionsTableViewController.m in Sources */,
 				F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */,
 				F91FE0121AE04AB100DC1438 /* DiscussionsTableViewCell.m in Sources */,
+				F9FB5A1B1AE13D7100CA24EE /* ResponsesTableViewController.m in Sources */,
+				F9FB5A1E1AE13D8300CA24EE /* ResponsesTableViewCell.m in Sources */,
 				F95CE7861AE004AF003DC96F /* LoginViewController.m in Sources */,
+				F9FB5A211AE13DB700CA24EE /* AddResponseViewController.m in Sources */,
 				F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */,
 				F91FE00C1AE0444F00DC1438 /* SettingsTableViewController.m in Sources */,
 				F9A6BB601AE023DC005B873C /* ForumTopicsTableViewCell.m in Sources */,

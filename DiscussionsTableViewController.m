@@ -74,8 +74,8 @@
             if (!error){
                 
                 [cell.userImage setImage:[UIImage imageWithData:data]];
-                cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
-                cell.userImage.layer.masksToBounds = YES;
+                //cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
+                //cell.userImage.layer.masksToBounds = YES;
             }
             else {
                 NSLog(@"no data!");
@@ -92,6 +92,8 @@
     tap.enabled = YES;
     [cell.userImage addGestureRecognizer:tap];
     
+    cell.discussionText.layer.cornerRadius = 8.0;
+    cell.discussionText.layer.masksToBounds = YES;
     cell.discussionText.text = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"DiscussionText"];
     return cell;
 }
