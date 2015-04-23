@@ -43,7 +43,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationItem.hidesBackButton = NO;
+    //self.navigationItem.hidesBackButton = NO;
 }
 
 - (void)agreeToRules:(id)sender {

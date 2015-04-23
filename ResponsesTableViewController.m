@@ -7,6 +7,10 @@
 //
 
 #import "ResponsesTableViewController.h"
+#import "AddResponseViewController.h"
+#import "ResponsesTableViewCell.h"
+#import <Parse/Parse.h>
+#import "UserProfileTableViewController.h"
 
 @interface ResponsesTableViewController ()
 
@@ -14,87 +18,103 @@
 
 @implementation ResponsesTableViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithClassName:@"Response"];
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // The className to query on
+        self.parseClassName = @"Response";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 20;
+    }
+    return self;
+}
+
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - PFQuery
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (PFQuery *)queryForTable {
     
-    // Configure the cell...
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    [query whereKey:@"DiscussionTopic" equalTo:self.discussion];
+    [query orderByDescending:@"createdAt"];
     
+    return query;
+}
+
+#pragma mark - PFQueryTableViewController
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    
+    ResponsesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseTVCell" forIndexPath:indexPath];
+    
+    PFUser *user = [self.objects objectAtIndex:indexPath.row][@"author"];
+    [user fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        cell.usernameLabel.text = [object objectForKey:@"username"];
+        
+        PFFile *pictureFile = [user objectForKey:@"picture"];
+        [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error){
+                
+                [cell.userImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+                //cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
+                //cell.userImage.layer.masksToBounds = YES;
+            }
+            else {
+                NSLog(@"no data!");
+            }
+        }];
+    }];
+    
+    cell.responseTextLabel.layer.cornerRadius = 8.0;
+    cell.responseTextLabel.layer.masksToBounds = YES;
+    cell.responseTextLabel.text = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"DiscussionText"];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"addResponse"]) {
+        
+        AddResponseViewController *addResponseViewController = (AddResponseViewController *)segue.destinationViewController;
+        addResponseViewController.discussion = self.discussion;
+    }
+    
+    if ([segue.identifier isEqualToString:@"showProfileFromResponse"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        PFUser *object = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"author"];
+        UINavigationController *navigationController = segue.destinationViewController;
+        UserProfileTableViewController *profileVC = (UserProfileTableViewController*) navigationController;
+        
+        profileVC.userToProfile = object;
+    }
 }
-*/
 
 @end

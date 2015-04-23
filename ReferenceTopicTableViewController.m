@@ -1,29 +1,29 @@
 //
-//  ForumTopicsTableViewController.m
+//  ReferenceTopicTableViewController.m
 //  DogApp
 //
-//  Created by Matt Maher on 4/16/15.
+//  Created by Matt Maher on 4/23/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
 
-#import "ForumTopicsTableViewController.h"
+#import "ReferenceTopicTableViewController.h"
 #import <Parse/Parse.h>
-#import "ForumTopicsTableViewCell.h"
-#import "DiscussionsTableViewController.h"
+#import "ReferenceTopicTableViewCell.h"
+#import "ReferenceArticlesTableViewController.h"
 
-@interface ForumTopicsTableViewController ()
+@interface ReferenceTopicTableViewController ()
 
 @end
 
-@implementation ForumTopicsTableViewController
+@implementation ReferenceTopicTableViewController
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithClassName:@"ForumTopics"];
+    self = [super initWithClassName:@"ReferenceTopics"];
     self = [super initWithCoder:aDecoder];
     if (self) {
         // The className to query on
-        self.parseClassName = @"ForumTopics";
+        self.parseClassName = @"ReferenceTopics";
         
         // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
@@ -41,6 +41,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (![[PFUser currentUser] objectForKey:@"admin"]) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
     
 }
 
@@ -64,7 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
-    ForumTopicsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"forumTopicTVCell" forIndexPath:indexPath];
+    ReferenceTopicTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"referenceTopicTVCell" forIndexPath:indexPath];
     
     PFFile *pictureFile = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"picture"];
     [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -95,11 +99,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if ([segue.identifier isEqualToString:@"showDiscussion"]) {
+    if ([segue.identifier isEqualToString:@"showArticles"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        DiscussionsTableViewController *discussionsTableViewController = (DiscussionsTableViewController *)segue.destinationViewController;
-        discussionsTableViewController.topic = object;
+        ReferenceArticlesTableViewController *referenceArticlesTableViewController = (ReferenceArticlesTableViewController *)segue.destinationViewController;
+        referenceArticlesTableViewController.topic = object;
     }
 }
 

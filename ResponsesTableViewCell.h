@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ResponsesTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIButton *userImageButton;
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *responseTextLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *userImage;
 
 @end

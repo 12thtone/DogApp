@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *login;
 @property (strong, nonatomic) IBOutlet UIButton *needAccount;
 @property (strong, nonatomic) IBOutlet UIButton *forgotPasword;
+- (IBAction)createAccount:(id)sender;
+
 
 @end
 
@@ -24,7 +26,7 @@
     [super viewDidLoad];
     
     //self.navigationItem.hidesBackButton = YES;
-    [self.navigationItem setHidesBackButton:YES animated:NO];
+    //[self.navigationItem setHidesBackButton:YES animated:NO];
     //[self.navigationItem setTitle:@""];
     
     [self.login addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
@@ -68,6 +70,10 @@
             }
         }];
     }
+}
+
+- (IBAction)createAccount:(id)sender {
+    self.navigationItem.hidesBackButton = NO;
 }
 
 @end

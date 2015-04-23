@@ -27,9 +27,11 @@
         NSLog(@"Current user: %@", currentUser.username);
     }
     else {
-        self.navigationItem.title = @"";
+        //self.navigationItem.title = @"";
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
+    
+    self.navigationItem.hidesBackButton = YES;
     
     self.newsTextView.layer.cornerRadius = 8.0;
     self.newsTextView.layer.masksToBounds = YES;
