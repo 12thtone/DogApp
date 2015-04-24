@@ -17,7 +17,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *discussionTextField;
 
 - (IBAction)savePressed:(UIBarButtonItem *)sender;
-- (IBAction)cancelPressed:(UIBarButtonItem *)sender;
 
 @end
 
@@ -28,6 +27,8 @@
     
     UIColor *color = [UIColor blackColor];
     self.discussionTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"What would you like to discuss?" attributes:@{NSForegroundColorAttributeName: color}];
+    
+    NSLog(@"TOPIC: %@", self.topic);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +69,7 @@
 {
     PFObject *newDiscussion = [PFObject objectWithClassName:@"Discussions"];
     newDiscussion[@"DiscussionText"] = self.discussionString;
+    newDiscussion[@"DiscussionTopic"] = self.topic;
     newDiscussion[@"author"] = [PFUser currentUser];
     
     [newDiscussion saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

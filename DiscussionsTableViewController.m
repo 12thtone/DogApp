@@ -9,6 +9,10 @@
 #import "DiscussionsTableViewController.h"
 #import <Parse/Parse.h>
 #import "DiscussionsTableViewCell.h"
+#import "ResponsesTableViewController.h"
+#import "AddDiscussionViewController.h"
+#import "UserProfileTableViewController.h"
+
 
 @interface DiscussionsTableViewController ()
 
@@ -41,6 +45,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"%@", self.topic);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -53,7 +59,7 @@
 - (PFQuery *)queryForTable {
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    
+    [query whereKey:@"DiscussionTopic" equalTo:self.topic];
     [query orderByDescending:@"createdAt"];
     
     return query;
@@ -73,7 +79,7 @@
         [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error){
                 
-                [cell.userImage setImage:[UIImage imageWithData:data]];
+                [cell.userImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
                 //cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
                 //cell.userImage.layer.masksToBounds = YES;
             }
@@ -83,14 +89,7 @@
         }];
     }];
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMMM d, yyyy"];
-    NSDate *date = [[self.objects objectAtIndex:indexPath.row] createdAt];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userProfileTapped:)];
-    [tap setNumberOfTapsRequired:1];
-    tap.enabled = YES;
-    [cell.userImage addGestureRecognizer:tap];
+    //[cell.userImageButton addTarget:self action:@selector(userProfileTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     cell.discussionText.layer.cornerRadius = 8.0;
     cell.discussionText.layer.masksToBounds = YES;
@@ -106,23 +105,29 @@
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"addDiscussion"]) {
+        
+        AddDiscussionViewController *addDiscussionViewController = (AddDiscussionViewController *)segue.destinationViewController;
+        addDiscussionViewController.topic = self.topic;
+    }
     
-}
-
-- (void)userProfileTapped:(UITapGestureRecognizer *)sender {
+    if ([segue.identifier isEqualToString:@"showResponse"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        ResponsesTableViewController *responsesTableViewController = (ResponsesTableViewController *)segue.destinationViewController;
+        responsesTableViewController.discussion = object;
+    }
     
-    CGPoint tapLocation = [sender locationInView:self.tableView];
-    NSIndexPath *tapIndexPath = [self.tableView indexPathForRowAtPoint:tapLocation];
-    
-    PFUser *user = [self.objects objectAtIndex:tapIndexPath.row];
-    /*
-    ProfileTableViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProfile"];
-    profileVC.userProfile = user;
-    
-    [self presentViewController:profileVC animated:YES completion:nil];
-     */
+    if ([segue.identifier isEqualToString:@"showProfile"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        PFUser *object = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"author"];
+        UINavigationController *navigationController = segue.destinationViewController;
+        UserProfileTableViewController *profileVC = (UserProfileTableViewController*) navigationController;
+        
+        profileVC.userToProfile = object;
+    }
 }
 
 @end

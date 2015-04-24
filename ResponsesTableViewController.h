@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
-@interface ResponsesTableViewController : UITableViewController
+@interface ResponsesTableViewController : PFQueryTableViewController
+
+@property (nonatomic, strong) PFObject *discussion;
 
 @end

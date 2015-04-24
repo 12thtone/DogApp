@@ -10,4 +10,6 @@
 
 @interface DiscussionsTableViewController : PFQueryTableViewController
 
+@property (nonatomic, strong) PFObject *topic;
+
 @end
