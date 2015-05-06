@@ -11,7 +11,14 @@
 		F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */; };
 		F9059C811ADEEFB500D6BCF4 /* CellPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */; };
 		F9059C821ADEEFB500D6BCF4 /* CellPic3.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7F1ADEEFB500D6BCF4 /* CellPic3.png */; };
-		F9122E2B1AE9308000C4D4E4 /* people-single@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9122E2A1AE9308000C4D4E4 /* people-single@2x.png */; };
+		F90AEB3D1AFA853700D7CB34 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB3C1AFA853700D7CB34 /* gear@2x.png */; };
+		F90AEB411AFA85AC00D7CB34 /* sharing-resources@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB401AFA85AC00D7CB34 /* sharing-resources@2x.png */; };
+		F90AEB431AFA85C900D7CB34 /* animal-footprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB421AFA85C900D7CB34 /* animal-footprint@2x.png */; };
+		F90AEB451AFA85EB00D7CB34 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB441AFA85EB00D7CB34 /* house@2x.png */; };
+		F90AEB471AFA860500D7CB34 /* dog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB461AFA860500D7CB34 /* dog@2x.png */; };
+		F90AEB491AFA862000D7CB34 /* people-single@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90AEB481AFA862000D7CB34 /* people-single@2x.png */; };
+		F90AEB4C1AFA9DC200D7CB34 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90AEB4B1AFA9DC200D7CB34 /* ForgotPasswordViewController.m */; };
+		F90AEB4F1AFAA20D00D7CB34 /* AddWhatsNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90AEB4E1AFAA20D00D7CB34 /* AddWhatsNewViewController.m */; };
 		F9122E2E1AE930C900C4D4E4 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E2D1AE930C900C4D4E4 /* MyProfileTableViewController.m */; };
 		F9122E311AE930D900C4D4E4 /* UserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E301AE930D900C4D4E4 /* UserProfileTableViewController.m */; };
 		F9122E341AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E331AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m */; };
@@ -34,13 +41,9 @@
 		F929F8161ADDA81700C8BE7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F929F8151ADDA81700C8BE7F /* Images.xcassets */; };
 		F929F8191ADDA81700C8BE7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F929F8171ADDA81700C8BE7F /* LaunchScreen.xib */; };
 		F929F8251ADDA81800C8BE7F /* DogAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F929F8241ADDA81800C8BE7F /* DogAppTests.m */; };
-		F95CE7521ADFF141003DC96F /* dog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7511ADFF141003DC96F /* dog@2x.png */; };
 		F95CE7541ADFF15D003DC96F /* dog-cartoon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7531ADFF15D003DC96F /* dog-cartoon@2x.png */; };
-		F95CE7561ADFF19A003DC96F /* animal-footprint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7551ADFF19A003DC96F /* animal-footprint@2x.png */; };
 		F95CE7581ADFF1D2003DC96F /* video-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7571ADFF1D2003DC96F /* video-camera@2x.png */; };
-		F95CE75A1ADFF310003DC96F /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7591ADFF310003DC96F /* house@2x.png */; };
 		F95CE75C1ADFF654003DC96F /* cogwheel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE75B1ADFF654003DC96F /* cogwheel@2x.png */; };
-		F95CE75E1ADFF679003DC96F /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE75D1ADFF679003DC96F /* gear@2x.png */; };
 		F95CE7601ADFF686003DC96F /* gear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE75F1ADFF686003DC96F /* gear@3x.png */; };
 		F95CE7621ADFFC4C003DC96F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CE7611ADFFC4C003DC96F /* Parse.framework */; };
 		F95CE7711ADFFD55003DC96F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CE7631ADFFD55003DC96F /* Accounts.framework */; };
@@ -85,7 +88,16 @@
 		F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic1.png; sourceTree = "<group>"; };
 		F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic2.png; sourceTree = "<group>"; };
 		F9059C7F1ADEEFB500D6BCF4 /* CellPic3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic3.png; sourceTree = "<group>"; };
-		F9122E2A1AE9308000C4D4E4 /* people-single@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people-single@2x.png"; sourceTree = "<group>"; };
+		F90AEB3C1AFA853700D7CB34 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
+		F90AEB401AFA85AC00D7CB34 /* sharing-resources@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharing-resources@2x.png"; sourceTree = "<group>"; };
+		F90AEB421AFA85C900D7CB34 /* animal-footprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-footprint@2x.png"; sourceTree = "<group>"; };
+		F90AEB441AFA85EB00D7CB34 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		F90AEB461AFA860500D7CB34 /* dog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog@2x.png"; sourceTree = "<group>"; };
+		F90AEB481AFA862000D7CB34 /* people-single@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people-single@2x.png"; sourceTree = "<group>"; };
+		F90AEB4A1AFA9DC200D7CB34 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		F90AEB4B1AFA9DC200D7CB34 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		F90AEB4D1AFAA20D00D7CB34 /* AddWhatsNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWhatsNewViewController.h; sourceTree = "<group>"; };
+		F90AEB4E1AFAA20D00D7CB34 /* AddWhatsNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWhatsNewViewController.m; sourceTree = "<group>"; };
 		F9122E2C1AE930C900C4D4E4 /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewController.h; sourceTree = "<group>"; };
 		F9122E2D1AE930C900C4D4E4 /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileTableViewController.m; sourceTree = "<group>"; };
 		F9122E2F1AE930D900C4D4E4 /* UserProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileTableViewController.h; sourceTree = "<group>"; };
@@ -129,13 +141,9 @@
 		F929F81E1ADDA81800C8BE7F /* DogAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F929F8231ADDA81800C8BE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F929F8241ADDA81800C8BE7F /* DogAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogAppTests.m; sourceTree = "<group>"; };
-		F95CE7511ADFF141003DC96F /* dog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog@2x.png"; sourceTree = "<group>"; };
 		F95CE7531ADFF15D003DC96F /* dog-cartoon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-cartoon@2x.png"; sourceTree = "<group>"; };
-		F95CE7551ADFF19A003DC96F /* animal-footprint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-footprint@2x.png"; sourceTree = "<group>"; };
 		F95CE7571ADFF1D2003DC96F /* video-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-camera@2x.png"; sourceTree = "<group>"; };
-		F95CE7591ADFF310003DC96F /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
 		F95CE75B1ADFF654003DC96F /* cogwheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cogwheel@2x.png"; sourceTree = "<group>"; };
-		F95CE75D1ADFF679003DC96F /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
 		F95CE75F1ADFF686003DC96F /* gear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@3x.png"; sourceTree = "<group>"; };
 		F95CE7611ADFFC4C003DC96F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DogApp/Parse.framework; sourceTree = "<group>"; };
 		F95CE7631ADFFD55003DC96F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -213,6 +221,8 @@
 			children = (
 				F91FE00A1AE0444F00DC1438 /* SettingsTableViewController.h */,
 				F91FE00B1AE0444F00DC1438 /* SettingsTableViewController.m */,
+				F90AEB4A1AFA9DC200D7CB34 /* ForgotPasswordViewController.h */,
+				F90AEB4B1AFA9DC200D7CB34 /* ForgotPasswordViewController.m */,
 				F95CE7871AE0197F003DC96F /* NewAccountViewController.h */,
 				F95CE7881AE0197F003DC96F /* NewAccountViewController.m */,
 				F95CE7841AE004AF003DC96F /* LoginViewController.h */,
@@ -275,6 +285,8 @@
 				F9122E451AE97F5100C4D4E4 /* AddRefTopViewController.m */,
 				F9122E411AE97F3200C4D4E4 /* AddForumTopViewController.h */,
 				F9122E421AE97F3200C4D4E4 /* AddForumTopViewController.m */,
+				F90AEB4D1AFAA20D00D7CB34 /* AddWhatsNewViewController.h */,
+				F90AEB4E1AFAA20D00D7CB34 /* AddWhatsNewViewController.m */,
 			);
 			name = Admin;
 			path = ..;
@@ -336,16 +348,17 @@
 		F929F8081ADDA81700C8BE7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F9122E2A1AE9308000C4D4E4 /* people-single@2x.png */,
+				F90AEB481AFA862000D7CB34 /* people-single@2x.png */,
+				F90AEB461AFA860500D7CB34 /* dog@2x.png */,
+				F90AEB441AFA85EB00D7CB34 /* house@2x.png */,
+				F90AEB421AFA85C900D7CB34 /* animal-footprint@2x.png */,
+				F90AEB401AFA85AC00D7CB34 /* sharing-resources@2x.png */,
+				F90AEB3C1AFA853700D7CB34 /* gear@2x.png */,
 				F9A6BB591AE0214E005B873C /* placeholder.png */,
 				F95CE75F1ADFF686003DC96F /* gear@3x.png */,
-				F95CE75D1ADFF679003DC96F /* gear@2x.png */,
 				F95CE75B1ADFF654003DC96F /* cogwheel@2x.png */,
-				F95CE7591ADFF310003DC96F /* house@2x.png */,
 				F95CE7571ADFF1D2003DC96F /* video-camera@2x.png */,
-				F95CE7551ADFF19A003DC96F /* animal-footprint@2x.png */,
 				F95CE7531ADFF15D003DC96F /* dog-cartoon@2x.png */,
-				F95CE7511ADFF141003DC96F /* dog@2x.png */,
 				F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */,
 				F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */,
 				F9059C7F1ADEEFB500D6BCF4 /* CellPic3.png */,
@@ -479,22 +492,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F929F8141ADDA81700C8BE7F /* Main.storyboard in Resources */,
-				F9122E2B1AE9308000C4D4E4 /* people-single@2x.png in Resources */,
 				F95CE7601ADFF686003DC96F /* gear@3x.png in Resources */,
-				F95CE75E1ADFF679003DC96F /* gear@2x.png in Resources */,
-				F95CE7521ADFF141003DC96F /* dog@2x.png in Resources */,
-				F95CE7561ADFF19A003DC96F /* animal-footprint@2x.png in Resources */,
 				F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */,
+				F90AEB451AFA85EB00D7CB34 /* house@2x.png in Resources */,
 				F95CE7581ADFF1D2003DC96F /* video-camera@2x.png in Resources */,
 				F929F8191ADDA81700C8BE7F /* LaunchScreen.xib in Resources */,
 				F95CE75C1ADFF654003DC96F /* cogwheel@2x.png in Resources */,
+				F90AEB471AFA860500D7CB34 /* dog@2x.png in Resources */,
 				F9059C7C1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png in Resources */,
 				F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */,
+				F90AEB431AFA85C900D7CB34 /* animal-footprint@2x.png in Resources */,
 				F9059C821ADEEFB500D6BCF4 /* CellPic3.png in Resources */,
 				F95CE7541ADFF15D003DC96F /* dog-cartoon@2x.png in Resources */,
-				F95CE75A1ADFF310003DC96F /* house@2x.png in Resources */,
+				F90AEB491AFA862000D7CB34 /* people-single@2x.png in Resources */,
+				F90AEB3D1AFA853700D7CB34 /* gear@2x.png in Resources */,
 				F929F8161ADDA81700C8BE7F /* Images.xcassets in Resources */,
 				F9059C811ADEEFB500D6BCF4 /* CellPic2.png in Resources */,
+				F90AEB411AFA85AC00D7CB34 /* sharing-resources@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +541,7 @@
 				F9122E3D1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m in Sources */,
 				F9122E2E1AE930C900C4D4E4 /* MyProfileTableViewController.m in Sources */,
 				F9122E341AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m in Sources */,
+				F90AEB4C1AFA9DC200D7CB34 /* ForgotPasswordViewController.m in Sources */,
 				F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */,
 				F9122E431AE97F3200C4D4E4 /* AddForumTopViewController.m in Sources */,
 				F91FE00C1AE0444F00DC1438 /* SettingsTableViewController.m in Sources */,
@@ -534,6 +549,7 @@
 				F9A6BB581AE02091005B873C /* DataSource.m in Sources */,
 				F91FE0151AE0555E00DC1438 /* AddDiscussionViewController.m in Sources */,
 				F9122E4C1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m in Sources */,
+				F90AEB4F1AFAA20D00D7CB34 /* AddWhatsNewViewController.m in Sources */,
 				F929F8111ADDA81700C8BE7F /* HomeViewController.m in Sources */,
 				F929F80E1ADDA81700C8BE7F /* AppDelegate.m in Sources */,
 				F9122E491AE97F6A00C4D4E4 /* AddRefArtViewController.m in Sources */,

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
 @interface ReferenceFullArticleTableViewController : UITableViewController
+
+@property (nonatomic, strong) PFObject *article;
 
 @end

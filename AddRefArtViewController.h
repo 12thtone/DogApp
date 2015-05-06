@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
 @interface AddRefArtViewController : UIViewController
+
+@property (nonatomic, strong) PFObject *topic;
 
 @end

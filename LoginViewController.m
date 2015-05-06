@@ -25,8 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tabBarController.tabBar setTintColor:[UIColor whiteColor]];
+    self.tabBarController.tabBar.alpha = 0.6;
+    [self.tabBarController.tabBar setBarTintColor:[UIColor blackColor]];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Login", nil)];
+    
     //self.navigationItem.hidesBackButton = YES;
-    //[self.navigationItem setHidesBackButton:YES animated:NO];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     //[self.navigationItem setTitle:@""];
     
     [self.login addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,6 +54,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)login:(id)sender {
