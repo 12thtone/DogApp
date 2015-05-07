@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     [self.tabBarController.tabBar setTintColor:[UIColor whiteColor]];
-    self.tabBarController.tabBar.alpha = 0.6;
+    self.tabBarController.tabBar.alpha = 0.7;
     [self.tabBarController.tabBar setBarTintColor:[UIColor blackColor]];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];

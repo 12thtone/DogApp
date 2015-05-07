@@ -39,7 +39,6 @@
 		F929F8111ADDA81700C8BE7F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F929F8101ADDA81700C8BE7F /* HomeViewController.m */; };
 		F929F8141ADDA81700C8BE7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F929F8121ADDA81700C8BE7F /* Main.storyboard */; };
 		F929F8161ADDA81700C8BE7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F929F8151ADDA81700C8BE7F /* Images.xcassets */; };
-		F929F8191ADDA81700C8BE7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F929F8171ADDA81700C8BE7F /* LaunchScreen.xib */; };
 		F929F8251ADDA81800C8BE7F /* DogAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F929F8241ADDA81800C8BE7F /* DogAppTests.m */; };
 		F95CE7541ADFF15D003DC96F /* dog-cartoon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7531ADFF15D003DC96F /* dog-cartoon@2x.png */; };
 		F95CE7581ADFF1D2003DC96F /* video-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F95CE7571ADFF1D2003DC96F /* video-camera@2x.png */; };
@@ -64,6 +63,8 @@
 		F95CE7821ADFFD7F003DC96F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CE7811ADFFD7F003DC96F /* ParseUI.framework */; };
 		F95CE7861AE004AF003DC96F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7851AE004AF003DC96F /* LoginViewController.m */; };
 		F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7881AE0197F003DC96F /* NewAccountViewController.m */; };
+		F963E19C1AFC206B0061C0C2 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963E19B1AFC206B0061C0C2 /* Launch.storyboard */; };
+		F963E19E1AFC20AC0061C0C2 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */; };
 		F9A6BB581AE02091005B873C /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB571AE02091005B873C /* DataSource.m */; };
 		F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BB591AE0214E005B873C /* placeholder.png */; };
 		F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB5C1AE023B8005B873C /* ForumTopicsTableViewController.m */; };
@@ -137,7 +138,6 @@
 		F929F8101ADDA81700C8BE7F /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = DogApp/HomeViewController.m; sourceTree = "<group>"; };
 		F929F8131ADDA81700C8BE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F929F8151ADDA81700C8BE7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F929F8181ADDA81700C8BE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F929F81E1ADDA81800C8BE7F /* DogAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F929F8231ADDA81800C8BE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F929F8241ADDA81800C8BE7F /* DogAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DogAppTests.m; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		F95CE7851AE004AF003DC96F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F95CE7871AE0197F003DC96F /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountViewController.h; sourceTree = "<group>"; };
 		F95CE7881AE0197F003DC96F /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountViewController.m; sourceTree = "<group>"; };
+		F963E19B1AFC206B0061C0C2 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Launch.storyboard; path = ../Launch.storyboard; sourceTree = "<group>"; };
+		F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F9A6BB561AE02091005B873C /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = ../DataSource.h; sourceTree = "<group>"; };
 		F9A6BB571AE02091005B873C /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = ../DataSource.m; sourceTree = "<group>"; };
 		F9A6BB591AE0214E005B873C /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -338,8 +340,8 @@
 				F9A6BB561AE02091005B873C /* DataSource.h */,
 				F9A6BB571AE02091005B873C /* DataSource.m */,
 				F929F8121ADDA81700C8BE7F /* Main.storyboard */,
+				F963E19B1AFC206B0061C0C2 /* Launch.storyboard */,
 				F929F8151ADDA81700C8BE7F /* Images.xcassets */,
-				F929F8171ADDA81700C8BE7F /* LaunchScreen.xib */,
 				F929F8081ADDA81700C8BE7F /* Supporting Files */,
 			);
 			path = DogApp;
@@ -348,6 +350,7 @@
 		F929F8081ADDA81700C8BE7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */,
 				F90AEB481AFA862000D7CB34 /* people-single@2x.png */,
 				F90AEB461AFA860500D7CB34 /* dog@2x.png */,
 				F90AEB441AFA85EB00D7CB34 /* house@2x.png */,
@@ -496,14 +499,15 @@
 				F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */,
 				F90AEB451AFA85EB00D7CB34 /* house@2x.png in Resources */,
 				F95CE7581ADFF1D2003DC96F /* video-camera@2x.png in Resources */,
-				F929F8191ADDA81700C8BE7F /* LaunchScreen.xib in Resources */,
 				F95CE75C1ADFF654003DC96F /* cogwheel@2x.png in Resources */,
 				F90AEB471AFA860500D7CB34 /* dog@2x.png in Resources */,
 				F9059C7C1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png in Resources */,
 				F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */,
 				F90AEB431AFA85C900D7CB34 /* animal-footprint@2x.png in Resources */,
 				F9059C821ADEEFB500D6BCF4 /* CellPic3.png in Resources */,
+				F963E19C1AFC206B0061C0C2 /* Launch.storyboard in Resources */,
 				F95CE7541ADFF15D003DC96F /* dog-cartoon@2x.png in Resources */,
+				F963E19E1AFC20AC0061C0C2 /* iTunesArtwork@2x.png in Resources */,
 				F90AEB491AFA862000D7CB34 /* people-single@2x.png in Resources */,
 				F90AEB3D1AFA853700D7CB34 /* gear@2x.png in Resources */,
 				F929F8161ADDA81700C8BE7F /* Images.xcassets in Resources */,
@@ -582,14 +586,6 @@
 				F929F8131ADDA81700C8BE7F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F929F8171ADDA81700C8BE7F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F929F8181ADDA81700C8BE7F /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
