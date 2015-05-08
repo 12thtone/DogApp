@@ -1,29 +1,25 @@
 //
-//  AddForumTopViewController.m
+//  AddWhatsNewViewController.m
 //  DogApp
 //
-//  Created by Matt Maher on 4/23/15.
+//  Created by Matt Maher on 5/6/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
 
-#import "AddForumTopViewController.h"
+#import "AddWhatsNewViewController.h"
 #import "DataSource.h"
 #import <Parse/Parse.h>
 
-@interface AddForumTopViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface AddWhatsNewViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *forumTopicName;
-@property (strong, nonatomic) IBOutlet UIImageView *topicImage;
-- (IBAction)imageLibrary:(id)sender;
-- (IBAction)cancel:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *whatsNewField;
 - (IBAction)save:(id)sender;
 
-@property (nonatomic, strong) NSString *topicString;
-@property (weak, nonatomic) UIImage *chosenImage;
+@property (nonatomic, strong) NSString *whatsNewString;
 
 @end
 
-@implementation AddForumTopViewController
+@implementation AddWhatsNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +32,7 @@
     [self.navigationController.navigationBar setTranslucent:YES];
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Add Forum Topic", nil)];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Add What's New", nil)];
     
     UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapDismissKeyboard];
@@ -48,27 +44,22 @@
 }
 
 -(void)dismissKeyboard {
-    [self.forumTopicName resignFirstResponder];
+    [self.whatsNewField resignFirstResponder];
 }
 
 - (IBAction)save:(UIBarButtonItem *)sender {
     
-    self.topicString = [self.forumTopicName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.whatsNewString = [self.whatsNewField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    if ([self.topicString length] == 0) {
+    if ([self.whatsNewString length] == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"Please enter some text."
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
-    } else if (!self.chosenImage) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                            message:@"Please choose an image."
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
     } else {
         
-        if ([[DataSource sharedInstance] filterForProfanity:self.topicString] == NO) {
-            [self saveTopic];
+        if ([[DataSource sharedInstance] filterForProfanity:self.whatsNewString] == NO) {
+            [self saveNew];
             [self dismissViewControllerAnimated:YES completion:nil];
         } else {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Uh oh!"
@@ -85,16 +76,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)saveTopic
-{    
-    NSData *imageData = UIImageJPEGRepresentation(self.chosenImage, 0.0f);
-    PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+- (void)saveNew
+{
+    PFObject *newWhatsNew = [PFObject objectWithClassName:@"News"];
+    newWhatsNew[@"newsText"] = self.whatsNewString;
     
-    PFObject *newTopic = [PFObject objectWithClassName:@"ForumTopics"];
-    newTopic[@"topicName"] = self.topicString;
-    newTopic[@"picture"] = imageFile;
-    
-    [newTopic saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [newWhatsNew saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil];
             [self.navigationController popViewControllerAnimated:YES];
@@ -107,33 +94,6 @@
     }];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - Image Library
-
-- (IBAction)imageLibrary:(id)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-}
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    self.chosenImage = info[UIImagePickerControllerEditedImage];
-    self.topicImage.image = self.chosenImage;
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
 }
 
 @end

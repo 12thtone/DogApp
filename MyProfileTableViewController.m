@@ -31,6 +31,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tabBarController.tabBar setTintColor:[UIColor whiteColor]];
+    self.tabBarController.tabBar.alpha = 0.7;
+    [self.tabBarController.tabBar setBarTintColor:[UIColor blackColor]];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"My Profile", nil)];
     /*
     //[self.myJokesButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     self.myJokesButton.layer.borderWidth = 1;

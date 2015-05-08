@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rfb-HY-FrR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dGg-HT-Hea">
+            <objects>
+                <viewController id="Rfb-HY-FrR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Fm-cN-0Rn"/>
+                        <viewControllerLayoutGuide type="bottom" id="mwR-0f-61n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GkC-1v-GmV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork.png" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-1V-Kn3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitalidog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29g-S8-kOI">
+                                <rect key="frame" x="16" y="82" width="568" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="zTe-Ds-VV5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="0.46999999999999997" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mwR-0f-61n" firstAttribute="top" secondItem="2hK-1V-Kn3" secondAttribute="bottom" id="D4c-zy-kkn"/>
+                            <constraint firstAttribute="trailing" secondItem="29g-S8-kOI" secondAttribute="trailing" constant="16" id="FVv-Am-O1B"/>
+                            <constraint firstItem="2hK-1V-Kn3" firstAttribute="top" secondItem="GkC-1v-GmV" secondAttribute="top" id="HiA-WC-u04"/>
+                            <constraint firstItem="2hK-1V-Kn3" firstAttribute="leading" secondItem="GkC-1v-GmV" secondAttribute="leading" id="XbL-Vi-l0k"/>
+                            <constraint firstItem="29g-S8-kOI" firstAttribute="top" secondItem="4Fm-cN-0Rn" secondAttribute="bottom" constant="62" id="mmH-hh-Uz2"/>
+                            <constraint firstItem="29g-S8-kOI" firstAttribute="leading" secondItem="GkC-1v-GmV" secondAttribute="leading" constant="16" id="t8d-ge-w1I"/>
+                            <constraint firstAttribute="trailing" secondItem="2hK-1V-Kn3" secondAttribute="trailing" id="uYZ-CW-z0U"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZP-98-kVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iTunesArtwork.png" width="512" height="512"/>
+    </resources>
+</document>

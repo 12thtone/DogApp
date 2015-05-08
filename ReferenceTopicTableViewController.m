@@ -42,10 +42,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (![[PFUser currentUser] objectForKey:@"admin"]) {
+    if (![[PFUser currentUser] objectForKey:@"admin"] == true) {
         self.navigationItem.rightBarButtonItem = nil;
     }
     
+    [self.tabBarController.tabBar setTintColor:[UIColor whiteColor]];
+    self.tabBarController.tabBar.alpha = 0.7;
+    [self.tabBarController.tabBar setBarTintColor:[UIColor blackColor]];
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Reference Topics", nil)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
