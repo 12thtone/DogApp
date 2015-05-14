@@ -56,11 +56,22 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Articles", nil)];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+}
+
+- (void)reloadTableView:(NSNotification*)notification {
+    {
+        if ([[notification name] isEqualToString:@"reloadTable"])
+        {
+            [self loadObjects];
+        }
+    }
 }
 
 #pragma mark - PFQuery
@@ -118,17 +129,6 @@
         ReferenceFullArticleTableViewController *referenceFullArticleTableViewController = (ReferenceFullArticleTableViewController *)segue.destinationViewController;
         referenceFullArticleTableViewController.article = object;
     }
-    /*
-    if ([segue.identifier isEqualToString:@"addArticle"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
-        PFUser *object = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"author"];
-        UINavigationController *navigationController = segue.destinationViewController;
-        AddRefArtViewController *profileVC = (AddRefArtViewController*) navigationController;
-        
-        profileVC.userToProfile = object;
-    }
-    */
 }
 
 @end

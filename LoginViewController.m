@@ -35,9 +35,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Login", nil)];
     
-    //self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = YES;
     [self.navigationItem setHidesBackButton:YES animated:YES];
-    //[self.navigationItem setTitle:@""];
     
     [self.login addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     self.login.layer.cornerRadius = 8;

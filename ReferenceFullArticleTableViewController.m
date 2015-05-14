@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *fullArtImage;
 @property (strong, nonatomic) IBOutlet UILabel *fullArtTitle;
 @property (strong, nonatomic) IBOutlet UITextView *fullArtText;
+- (IBAction)shareArticle:(id)sender;
 
 @end
 
@@ -54,4 +55,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Sharing
+
+- (IBAction)shareArticle:(id)sender {
+    
+    NSString *messageBody = [NSString stringWithFormat:@"%@ found an article for you on Vitalidog!\n\n%@\n\nTo view this article, and tons more like it, download Vitalidog!\n\nhttp://www.12thtone.com", [[PFUser currentUser] username], [self.article objectForKey:@"articleText"]];
+    
+    NSMutableArray *articleToShare = [NSMutableArray array];
+    [articleToShare addObject:messageBody];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:articleToShare applicationActivities:nil];
+    
+    if (!([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
+        activityVC.popoverPresentationController.sourceView = self.view;
+    }
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+    
+    if (UIActivityTypeMail) {
+        [activityVC setValue:@"Vitalidog" forKey:@"subject"];
+    }
+}
 @end

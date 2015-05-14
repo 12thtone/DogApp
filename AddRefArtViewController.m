@@ -48,6 +48,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dismissKeyboard {
+    [self.articleTitle resignFirstResponder];
+    [self.articleText resignFirstResponder];
+}
+
 - (IBAction)save:(UIBarButtonItem *)sender {
     
     self.titleString = [self.articleTitle.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -110,33 +115,6 @@
     }];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    /*
-     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-     if (networkStatus == NotReachable) {
-     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Uh oh!"
-     message:@"There's a problem with the internet connection. We'll get your joke up ASAP!"
-     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-     [alertView show];
-     [newJoke saveEventually];
-     } else {
-     
-     [newJoke saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-     if (succeeded) {
-     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil];
-     [self.navigationController popViewControllerAnimated:YES];
-     } else {
-     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error!"
-     message:[error.userInfo objectForKey:@"error"]
-     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-     [alertView show];
-     }
-     }];
-     
-     [self dismissViewControllerAnimated:YES completion:nil];
-     }
-     */
     
 }
 

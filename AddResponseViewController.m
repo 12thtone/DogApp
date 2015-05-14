@@ -13,8 +13,10 @@
 @interface AddResponseViewController ()
 
 @property (nonatomic, strong) NSString *responseString;
+@property (nonatomic, strong) NSString *responseBodyString;
 
 @property (strong, nonatomic) IBOutlet UITextField *responseTextField;
+@property (strong, nonatomic) IBOutlet UITextView *responseTextBody;
 
 - (IBAction)savePressed:(UIBarButtonItem *)sender;
 
@@ -36,7 +38,13 @@
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Add Response", nil)];
     
     UIColor *color = [UIColor blackColor];
-    self.responseTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Please enter your response." attributes:@{NSForegroundColorAttributeName: color}];
+    self.responseTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Response Headline" attributes:@{NSForegroundColorAttributeName: color}];
+    
+    self.responseTextBody.layer.cornerRadius = 8.0;
+    self.responseTextBody.layer.masksToBounds = YES;
+    
+    UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tapDismissKeyboard];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,13 +52,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dismissKeyboard {
+    [self.responseTextField resignFirstResponder];
+    [self.responseTextBody resignFirstResponder];
+}
+
 - (IBAction)savePressed:(UIBarButtonItem *)sender {
     
     self.responseString = [self.responseTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.responseBodyString = [self.responseTextBody.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *tooLongString = [NSString stringWithFormat:@"The headline must be under 40 characters. Currently, it is %ld characters", (long)[self.responseString length]];
     
     if ([self.responseString length] == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"Please enter some text."
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    } else if ([self.responseBodyString length] == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                            message:@"Please enter some text."
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    } else if ([self.responseString length] > 40) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                            message:tooLongString
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     } else {
@@ -77,6 +102,7 @@
 {
     PFObject *newResponse = [PFObject objectWithClassName:@"Response"];
     newResponse[@"DiscussionText"] = self.responseString;
+    newResponse[@"responseBody"] = self.responseBodyString;
     newResponse[@"DiscussionTopic"] = self.discussion;
     newResponse[@"author"] = [PFUser currentUser];
     
@@ -93,33 +119,6 @@
     }];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    /*
-     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-     if (networkStatus == NotReachable) {
-     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Uh oh!"
-     message:@"There's a problem with the internet connection. We'll get your joke up ASAP!"
-     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-     [alertView show];
-     [newJoke saveEventually];
-     } else {
-     
-     [newJoke saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-     if (succeeded) {
-     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil];
-     [self.navigationController popViewControllerAnimated:YES];
-     } else {
-     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error!"
-     message:[error.userInfo objectForKey:@"error"]
-     delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-     [alertView show];
-     }
-     }];
-     
-     [self dismissViewControllerAnimated:YES completion:nil];
-     }
-     */
     
 }
 

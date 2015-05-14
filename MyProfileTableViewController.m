@@ -41,19 +41,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"My Profile", nil)];
-    /*
-    //[self.myJokesButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
-    self.myJokesButton.layer.borderWidth = 1;
-    self.myJokesButton.layer.borderColor = [UIColor purpleColor].CGColor;
-    self.myJokesButton.layer.cornerRadius = 8;
-    self.myJokesButton.layer.masksToBounds = YES;
     
-    //[self.myResponsesButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
-    self.myResponsesButton.layer.borderWidth = 1;
-    self.myResponsesButton.layer.borderColor = [UIColor purpleColor].CGColor;
-    self.myResponsesButton.layer.cornerRadius = 8;
-    self.myResponsesButton.layer.masksToBounds = YES;
-    */
     UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapDismissKeyboard];
     
@@ -164,65 +152,11 @@
         user[@"description"] = self.profileString;
         [user saveInBackground];
     }
-    /*
-    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-    if (networkStatus == NotReachable) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Uh oh!"
-                                                            message:@"There's a problem with the internet connection. Try again when there's a better signal."
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-    } else {
-        
-        if (self.chosenImage) {
-            self.profileString = self.textProfile.text;
-            
-            NSData *imageData = UIImageJPEGRepresentation(self.chosenImage, 0.0f);
-            PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
-            [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if (!error) {
-                    
-                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Profile Updated"
-                                                                        message:@"Your changes have been saved."
-                                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                    [alertView show];
-                    
-                    if (succeeded) {
-                        
-                        PFUser *user = [PFUser currentUser];
-                        user[@"description"] = self.profileString;
-                        user[@"picture"] = imageFile;
-                        [user saveInBackground];
-                    }
-                } else {
-                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error!"
-                                                                        message:[error.userInfo objectForKey:@"error"]
-                                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                    [alertView show];
-                }
-            }];
-        } else {
-            self.profileString = self.textProfile.text;
-            
-            PFUser *user = [PFUser currentUser];
-            user[@"description"] = self.profileString;
-            [user saveInBackground];
-        }
-        
-    }
-     */
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    /*
-    if ([segue.identifier isEqualToString:@"toSettings"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        
-        SettingsTableViewController *settingsTableViewController = (SettingsTableViewController*) navigationController;
-        settingsTableViewController.interstitialPresentationPolicy = ADInterstitialPresentationPolicyAutomatic;
-    }
-     */
+    
 }
 
 #pragma mark - Images

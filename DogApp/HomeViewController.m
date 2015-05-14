@@ -27,7 +27,6 @@
         NSLog(@"Current user: %@", currentUser.username);
     }
     else {
-        //self.navigationItem.title = @"";
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
@@ -41,17 +40,12 @@
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTranslucent:YES];
-        
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Home", nil)];
     
     self.navigationItem.hidesBackButton = YES;
     
     self.newsTextView.layer.cornerRadius = 8.0;
     self.newsTextView.layer.masksToBounds = YES;
-    
-    //self.newsTextView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:36.0];
-    
+        
     [self setNews];
 }
 
@@ -65,20 +59,20 @@
         
     self.navigationItem.hidesBackButton = YES;
     [self.navigationItem setHidesBackButton:YES animated:NO];
-    //[self.navigationItem setTitle:@""];
+    [self.navigationItem setTitle:@""];
 }
 
 - (void)setNews {
-    NSMutableArray *jokeArray = [[NSMutableArray alloc] init];
+    NSMutableArray *newsArray = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"News"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (PFObject *joke in objects) {
-            [jokeArray addObject:[joke objectForKey:@"newsText"]];
+        for (PFObject *news in objects) {
+            [newsArray addObject:[news objectForKey:@"newsText"]];
         }
         
-        self.newsString = [NSString stringWithFormat:@"%@", jokeArray[0]];
+        self.newsString = [NSString stringWithFormat:@"%@", newsArray[0]];
         self.newsTextView.text = self.newsString;
     }];
 }
