@@ -1740,7 +1740,6 @@
                     <connections>
                         <outlet property="bodyText" destination="zVn-Kw-yZh" id="i7j-w1-bjG"/>
                         <outlet property="imageProfile" destination="hcY-e9-DDZ" id="NMT-OE-gMk"/>
-                        <outlet property="reportViolation" destination="4Li-2n-qEz" id="7um-Jm-SKd"/>
                         <outlet property="titleLabel" destination="Fg4-Yg-YBR" id="JjW-cf-UWZ"/>
                         <outlet property="usernameLabel" destination="QeS-yD-IVm" id="tDt-di-IyY"/>
                     </connections>

@@ -39,7 +39,9 @@
     PFUser *user = [self.response objectForKey:@"author"];
     [user fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         
-        self.usernameLabel.text = [self.response objectForKey:@"username"];
+        self.usernameLabel.text = [object objectForKey:@"username"];
+        
+        NSLog(@"%@", [self.response objectForKey:@"username"]);
         
         PFFile *pictureFile = [user objectForKey:@"picture"];
         [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {

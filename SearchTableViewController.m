@@ -143,8 +143,7 @@
     {
         case 0:
             self.forumSearch = NO;
-            [self loadObjects
-             ];
+            [self loadObjects];
             break;
         case 1:
             self.forumSearch = YES;
@@ -162,6 +161,8 @@
     [searchBar resignFirstResponder];
     
     [self queryForTable];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil];
 }
 
 #pragma mark - Navigation
