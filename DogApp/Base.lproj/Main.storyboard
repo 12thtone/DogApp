@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myPostsTVCell" rowHeight="62" id="lxl-g1-k9G" customClass="MyPostsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="myPostsTVCell" rowHeight="62" id="lxl-g1-k9G" customClass="MyPostsTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lxl-g1-k9G" id="oRJ-oX-HFj">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -249,7 +249,7 @@
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="referenceTopicTVCell" rowHeight="70" id="j3G-L7-026" customClass="ReferenceTopicTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="referenceTopicTVCell" rowHeight="70" id="j3G-L7-026" customClass="ReferenceTopicTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3G-L7-026" id="PNZ-Pr-iLs">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -1167,7 +1167,7 @@
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="forumTopicTVCell" rowHeight="70" id="joW-BT-Lku" customClass="ForumTopicsTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="forumTopicTVCell" rowHeight="70" id="joW-BT-Lku" customClass="ForumTopicsTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="joW-BT-Lku" id="E4U-7z-uW7">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -1476,7 +1476,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTVCell" rowHeight="70" id="jcI-Gc-OmJ" customClass="SearchTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="searchTVCell" rowHeight="70" id="jcI-Gc-OmJ" customClass="SearchTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jcI-Gc-OmJ" id="ARk-kY-WCT">
                                     <autoresizingMask key="autoresizingMask"/>
