@@ -16,6 +16,7 @@
 - (IBAction)imageLibrary:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)imageCamera:(id)sender;
 
 @property (nonatomic, strong) NSString *topicString;
 @property (weak, nonatomic) UIImage *chosenImage;
@@ -57,6 +58,11 @@
     if ([self.topicString length] == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"Please enter some text."
+                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    } else if ([self.topicString length] > 11) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                            message:@"Must be 11 characters or less."
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     } else if (!self.chosenImage) {
@@ -108,7 +114,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - Image Library
+#pragma mark - Images
 
 - (IBAction)imageLibrary:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -133,6 +139,27 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+}
+
+- (IBAction)imageCamera:(id)sender {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                              message:@"This device has no camera."
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
 }
 
 @end

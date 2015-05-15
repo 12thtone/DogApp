@@ -36,6 +36,9 @@
     [self.submitEmail addTarget:self action:@selector(submitEmail:) forControlEvents:UIControlEventTouchUpInside];
     self.submitEmail.layer.cornerRadius = 8;
     self.submitEmail.layer.masksToBounds = YES;
+    
+    UIColor *color = [UIColor blackColor];
+    self.userEmail.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email Address" attributes:@{NSForegroundColorAttributeName: color}];
 }
 
 - (void)didReceiveMemoryWarning {

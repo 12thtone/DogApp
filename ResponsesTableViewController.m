@@ -11,6 +11,7 @@
 #import "ResponsesTableViewCell.h"
 #import <Parse/Parse.h>
 #import "UserProfileTableViewController.h"
+#import "FullResponseTableViewController.h"
 
 @interface ResponsesTableViewController ()
 
@@ -52,11 +53,22 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Responses", nil)];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+}
+
+- (void)reloadTableView:(NSNotification*)notification {
+    {
+        if ([[notification name] isEqualToString:@"reloadTable"])
+        {
+            [self loadObjects];
+        }
+    }
 }
 
 #pragma mark - PFQuery
@@ -85,8 +97,6 @@
             if (!error){
                 
                 [cell.userImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
-                //cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
-                //cell.userImage.layer.masksToBounds = YES;
             }
             else {
                 NSLog(@"no data!");
@@ -123,6 +133,13 @@
         UserProfileTableViewController *profileVC = (UserProfileTableViewController*) navigationController;
         
         profileVC.userToProfile = object;
+    }
+    
+    if ([segue.identifier isEqualToString:@"showResponse"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        FullResponseTableViewController *fullResponseTableViewController = (FullResponseTableViewController *)segue.destinationViewController;
+        fullResponseTableViewController.response = object;
     }
 }
 

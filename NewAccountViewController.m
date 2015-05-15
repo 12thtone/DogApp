@@ -27,9 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = NO;
-    [self.navigationItem setHidesBackButton:NO animated:YES];
     
     [self.tabBarController.tabBar setTintColor:[UIColor whiteColor]];
     self.tabBarController.tabBar.alpha = 0.7;
@@ -55,7 +52,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationItem.hidesBackButton = NO;
 }
 
 - (void)agreeToRules:(id)sender {
@@ -125,7 +121,6 @@
                 [alertView show];
             }
             else {
-                //[self.navigationController popToRootViewControllerAnimated:YES];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
         }];

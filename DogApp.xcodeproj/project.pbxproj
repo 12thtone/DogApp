@@ -30,6 +30,7 @@
 		F9122E461AE97F5100C4D4E4 /* AddRefTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E451AE97F5100C4D4E4 /* AddRefTopViewController.m */; };
 		F9122E491AE97F6A00C4D4E4 /* AddRefArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E481AE97F6A00C4D4E4 /* AddRefArtViewController.m */; };
 		F9122E4C1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E4B1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m */; };
+		F91B12831AFD3B8100C5EFCC /* dog-embossed.png in Resources */ = {isa = PBXBuildFile; fileRef = F91B12821AFD3B8100C5EFCC /* dog-embossed.png */; };
 		F91FE00C1AE0444F00DC1438 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FE00B1AE0444F00DC1438 /* SettingsTableViewController.m */; };
 		F91FE00F1AE04A9D00DC1438 /* DiscussionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FE00E1AE04A9D00DC1438 /* DiscussionsTableViewController.m */; };
 		F91FE0121AE04AB100DC1438 /* DiscussionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FE0111AE04AB100DC1438 /* DiscussionsTableViewCell.m */; };
@@ -63,12 +64,28 @@
 		F95CE7821ADFFD7F003DC96F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CE7811ADFFD7F003DC96F /* ParseUI.framework */; };
 		F95CE7861AE004AF003DC96F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7851AE004AF003DC96F /* LoginViewController.m */; };
 		F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7881AE0197F003DC96F /* NewAccountViewController.m */; };
+		F96303321B03A47F0080ECB4 /* FullResponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */; };
+		F96303441B03C3640080ECB4 /* IMG_0238.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303431B03C3640080ECB4 /* IMG_0238.png */; };
+		F96303461B03C3C70080ECB4 /* IMG_0250.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303451B03C3C70080ECB4 /* IMG_0250.png */; };
+		F96303481B03C46F0080ECB4 /* IMG_0245-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303471B03C46F0080ECB4 /* IMG_0245-1.png */; };
+		F963034A1B03C5210080ECB4 /* IMG_0232.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303491B03C5210080ECB4 /* IMG_0232.png */; };
+		F963034C1B03C5A40080ECB4 /* rottweiler-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = F963034B1B03C5A40080ECB4 /* rottweiler-dog.png */; };
+		F963034E1B03C64B0080ECB4 /* dog-on-grass.png in Resources */ = {isa = PBXBuildFile; fileRef = F963034D1B03C64B0080ECB4 /* dog-on-grass.png */; };
+		F96303501B03C6BE0080ECB4 /* dalmatian-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = F963034F1B03C6BE0080ECB4 /* dalmatian-dog.png */; };
+		F96303521B03C72E0080ECB4 /* border-collie-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303511B03C72E0080ECB4 /* border-collie-dog.png */; };
 		F963E19C1AFC206B0061C0C2 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F963E19B1AFC206B0061C0C2 /* Launch.storyboard */; };
 		F963E19E1AFC20AC0061C0C2 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */; };
 		F9A6BB581AE02091005B873C /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB571AE02091005B873C /* DataSource.m */; };
 		F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BB591AE0214E005B873C /* placeholder.png */; };
 		F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB5C1AE023B8005B873C /* ForumTopicsTableViewController.m */; };
 		F9A6BB601AE023DC005B873C /* ForumTopicsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BB5F1AE023DC005B873C /* ForumTopicsTableViewCell.m */; };
+		F9B458601B04E4D900912227 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B4585F1B04E4D900912227 /* SearchTableViewController.m */; };
+		F9B458631B04E4ED00912227 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B458621B04E4ED00912227 /* SearchTableViewCell.m */; };
+		F9B458651B04E5E400912227 /* magnifying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B458641B04E5E400912227 /* magnifying@2x.png */; };
+		F9B458681B04FEC500912227 /* FullSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B458671B04FEC500912227 /* FullSearchResultTableViewController.m */; };
+		F9F6060F1B0426D0006CAFAC /* forbidden@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6060E1B0426D0006CAFAC /* forbidden@3x.png */; };
+		F9F606121B0427B1006CAFAC /* MyPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F606111B0427B1006CAFAC /* MyPostsTableViewController.m */; };
+		F9F606151B0427FC006CAFAC /* MyPostsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F606141B0427FC006CAFAC /* MyPostsTableViewCell.m */; };
 		F9FB5A1B1AE13D7100CA24EE /* ResponsesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A1A1AE13D7100CA24EE /* ResponsesTableViewController.m */; };
 		F9FB5A1E1AE13D8300CA24EE /* ResponsesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A1D1AE13D8300CA24EE /* ResponsesTableViewCell.m */; };
 		F9FB5A211AE13DB700CA24EE /* AddResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */; };
@@ -121,6 +138,7 @@
 		F9122E481AE97F6A00C4D4E4 /* AddRefArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRefArtViewController.m; sourceTree = "<group>"; };
 		F9122E4A1AE97F7C00C4D4E4 /* AddRefFullArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRefFullArtViewController.h; sourceTree = "<group>"; };
 		F9122E4B1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRefFullArtViewController.m; sourceTree = "<group>"; };
+		F91B12821AFD3B8100C5EFCC /* dog-embossed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-embossed.png"; sourceTree = "<group>"; };
 		F91FE00A1AE0444F00DC1438 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		F91FE00B1AE0444F00DC1438 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		F91FE00D1AE04A9D00DC1438 /* DiscussionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussionsTableViewController.h; sourceTree = "<group>"; };
@@ -166,6 +184,16 @@
 		F95CE7851AE004AF003DC96F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F95CE7871AE0197F003DC96F /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountViewController.h; sourceTree = "<group>"; };
 		F95CE7881AE0197F003DC96F /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountViewController.m; sourceTree = "<group>"; };
+		F96303301B03A47F0080ECB4 /* FullResponseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullResponseTableViewController.h; sourceTree = "<group>"; };
+		F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullResponseTableViewController.m; sourceTree = "<group>"; };
+		F96303431B03C3640080ECB4 /* IMG_0238.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0238.png; sourceTree = "<group>"; };
+		F96303451B03C3C70080ECB4 /* IMG_0250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0250.png; sourceTree = "<group>"; };
+		F96303471B03C46F0080ECB4 /* IMG_0245-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_0245-1.png"; sourceTree = "<group>"; };
+		F96303491B03C5210080ECB4 /* IMG_0232.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0232.png; sourceTree = "<group>"; };
+		F963034B1B03C5A40080ECB4 /* rottweiler-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rottweiler-dog.png"; sourceTree = "<group>"; };
+		F963034D1B03C64B0080ECB4 /* dog-on-grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog-on-grass.png"; sourceTree = "<group>"; };
+		F963034F1B03C6BE0080ECB4 /* dalmatian-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dalmatian-dog.png"; sourceTree = "<group>"; };
+		F96303511B03C72E0080ECB4 /* border-collie-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border-collie-dog.png"; sourceTree = "<group>"; };
 		F963E19B1AFC206B0061C0C2 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Launch.storyboard; path = ../Launch.storyboard; sourceTree = "<group>"; };
 		F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F9A6BB561AE02091005B873C /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = ../DataSource.h; sourceTree = "<group>"; };
@@ -175,6 +203,18 @@
 		F9A6BB5C1AE023B8005B873C /* ForumTopicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTopicsTableViewController.m; sourceTree = "<group>"; };
 		F9A6BB5E1AE023DC005B873C /* ForumTopicsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumTopicsTableViewCell.h; sourceTree = "<group>"; };
 		F9A6BB5F1AE023DC005B873C /* ForumTopicsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTopicsTableViewCell.m; sourceTree = "<group>"; };
+		F9B4585E1B04E4D900912227 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		F9B4585F1B04E4D900912227 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		F9B458611B04E4ED00912227 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		F9B458621B04E4ED00912227 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		F9B458641B04E5E400912227 /* magnifying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying@2x.png"; sourceTree = "<group>"; };
+		F9B458661B04FEC500912227 /* FullSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullSearchResultTableViewController.h; sourceTree = "<group>"; };
+		F9B458671B04FEC500912227 /* FullSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullSearchResultTableViewController.m; sourceTree = "<group>"; };
+		F9F6060E1B0426D0006CAFAC /* forbidden@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forbidden@3x.png"; sourceTree = "<group>"; };
+		F9F606101B0427B1006CAFAC /* MyPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPostsTableViewController.h; sourceTree = "<group>"; };
+		F9F606111B0427B1006CAFAC /* MyPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPostsTableViewController.m; sourceTree = "<group>"; };
+		F9F606131B0427FC006CAFAC /* MyPostsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPostsTableViewCell.h; sourceTree = "<group>"; };
+		F9F606141B0427FC006CAFAC /* MyPostsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPostsTableViewCell.m; sourceTree = "<group>"; };
 		F9FB5A191AE13D7100CA24EE /* ResponsesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponsesTableViewController.h; sourceTree = "<group>"; };
 		F9FB5A1A1AE13D7100CA24EE /* ResponsesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponsesTableViewController.m; sourceTree = "<group>"; };
 		F9FB5A1C1AE13D8300CA24EE /* ResponsesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponsesTableViewCell.h; sourceTree = "<group>"; };
@@ -237,6 +277,8 @@
 		F9122E4E1AE97FE300C4D4E4 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
+				F96303301B03A47F0080ECB4 /* FullResponseTableViewController.h */,
+				F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */,
 				F9FB5A1F1AE13DB700CA24EE /* AddResponseViewController.h */,
 				F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */,
 				F9FB5A1C1AE13D8300CA24EE /* ResponsesTableViewCell.h */,
@@ -294,17 +336,27 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		F9122E511AE9826300C4D4E4 /* Home + Profile */ = {
+		F9122E511AE9826300C4D4E4 /* Home + Profile + Search */ = {
 			isa = PBXGroup;
 			children = (
+				F9B458661B04FEC500912227 /* FullSearchResultTableViewController.h */,
+				F9B458671B04FEC500912227 /* FullSearchResultTableViewController.m */,
+				F9B458611B04E4ED00912227 /* SearchTableViewCell.h */,
+				F9B458621B04E4ED00912227 /* SearchTableViewCell.m */,
+				F9B4585E1B04E4D900912227 /* SearchTableViewController.h */,
+				F9B4585F1B04E4D900912227 /* SearchTableViewController.m */,
 				F9122E2F1AE930D900C4D4E4 /* UserProfileTableViewController.h */,
 				F9122E301AE930D900C4D4E4 /* UserProfileTableViewController.m */,
+				F9F606131B0427FC006CAFAC /* MyPostsTableViewCell.h */,
+				F9F606141B0427FC006CAFAC /* MyPostsTableViewCell.m */,
+				F9F606101B0427B1006CAFAC /* MyPostsTableViewController.h */,
+				F9F606111B0427B1006CAFAC /* MyPostsTableViewController.m */,
 				F9122E2C1AE930C900C4D4E4 /* MyProfileTableViewController.h */,
 				F9122E2D1AE930C900C4D4E4 /* MyProfileTableViewController.m */,
 				F929F80F1ADDA81700C8BE7F /* HomeViewController.h */,
 				F929F8101ADDA81700C8BE7F /* HomeViewController.m */,
 			);
-			name = "Home + Profile";
+			name = "Home + Profile + Search";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -330,7 +382,7 @@
 		F929F8071ADDA81700C8BE7F /* DogApp */ = {
 			isa = PBXGroup;
 			children = (
-				F9122E511AE9826300C4D4E4 /* Home + Profile */,
+				F9122E511AE9826300C4D4E4 /* Home + Profile + Search */,
 				F9122E4D1AE97FD400C4D4E4 /* Account */,
 				F9122E4E1AE97FE300C4D4E4 /* Forum */,
 				F9122E4F1AE97FED00C4D4E4 /* Reference */,
@@ -350,6 +402,17 @@
 		F929F8081ADDA81700C8BE7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9F6060E1B0426D0006CAFAC /* forbidden@3x.png */,
+				F9B458641B04E5E400912227 /* magnifying@2x.png */,
+				F96303431B03C3640080ECB4 /* IMG_0238.png */,
+				F96303451B03C3C70080ECB4 /* IMG_0250.png */,
+				F96303471B03C46F0080ECB4 /* IMG_0245-1.png */,
+				F96303491B03C5210080ECB4 /* IMG_0232.png */,
+				F963034B1B03C5A40080ECB4 /* rottweiler-dog.png */,
+				F963034D1B03C64B0080ECB4 /* dog-on-grass.png */,
+				F963034F1B03C6BE0080ECB4 /* dalmatian-dog.png */,
+				F96303511B03C72E0080ECB4 /* border-collie-dog.png */,
+				F91B12821AFD3B8100C5EFCC /* dog-embossed.png */,
 				F963E19D1AFC20AC0061C0C2 /* iTunesArtwork@2x.png */,
 				F90AEB481AFA862000D7CB34 /* people-single@2x.png */,
 				F90AEB461AFA860500D7CB34 /* dog@2x.png */,
@@ -494,24 +557,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F963034E1B03C64B0080ECB4 /* dog-on-grass.png in Resources */,
 				F929F8141ADDA81700C8BE7F /* Main.storyboard in Resources */,
+				F96303521B03C72E0080ECB4 /* border-collie-dog.png in Resources */,
+				F963034C1B03C5A40080ECB4 /* rottweiler-dog.png in Resources */,
 				F95CE7601ADFF686003DC96F /* gear@3x.png in Resources */,
 				F9A6BB5A1AE0214E005B873C /* placeholder.png in Resources */,
+				F96303481B03C46F0080ECB4 /* IMG_0245-1.png in Resources */,
 				F90AEB451AFA85EB00D7CB34 /* house@2x.png in Resources */,
 				F95CE7581ADFF1D2003DC96F /* video-camera@2x.png in Resources */,
 				F95CE75C1ADFF654003DC96F /* cogwheel@2x.png in Resources */,
 				F90AEB471AFA860500D7CB34 /* dog@2x.png in Resources */,
+				F9B458651B04E5E400912227 /* magnifying@2x.png in Resources */,
 				F9059C7C1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png in Resources */,
 				F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */,
 				F90AEB431AFA85C900D7CB34 /* animal-footprint@2x.png in Resources */,
 				F9059C821ADEEFB500D6BCF4 /* CellPic3.png in Resources */,
 				F963E19C1AFC206B0061C0C2 /* Launch.storyboard in Resources */,
+				F9F6060F1B0426D0006CAFAC /* forbidden@3x.png in Resources */,
+				F96303441B03C3640080ECB4 /* IMG_0238.png in Resources */,
 				F95CE7541ADFF15D003DC96F /* dog-cartoon@2x.png in Resources */,
 				F963E19E1AFC20AC0061C0C2 /* iTunesArtwork@2x.png in Resources */,
 				F90AEB491AFA862000D7CB34 /* people-single@2x.png in Resources */,
 				F90AEB3D1AFA853700D7CB34 /* gear@2x.png in Resources */,
+				F91B12831AFD3B8100C5EFCC /* dog-embossed.png in Resources */,
+				F96303501B03C6BE0080ECB4 /* dalmatian-dog.png in Resources */,
+				F96303461B03C3C70080ECB4 /* IMG_0250.png in Resources */,
 				F929F8161ADDA81700C8BE7F /* Images.xcassets in Resources */,
 				F9059C811ADEEFB500D6BCF4 /* CellPic2.png in Resources */,
+				F963034A1B03C5210080ECB4 /* IMG_0232.png in Resources */,
 				F90AEB411AFA85AC00D7CB34 /* sharing-resources@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +609,7 @@
 				F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */,
 				F9122E3A1AE9762300C4D4E4 /* ReferenceArticlesTableViewController.m in Sources */,
 				F9122E461AE97F5100C4D4E4 /* AddRefTopViewController.m in Sources */,
+				F9B458631B04E4ED00912227 /* SearchTableViewCell.m in Sources */,
 				F91FE0121AE04AB100DC1438 /* DiscussionsTableViewCell.m in Sources */,
 				F9FB5A1B1AE13D7100CA24EE /* ResponsesTableViewController.m in Sources */,
 				F9FB5A1E1AE13D8300CA24EE /* ResponsesTableViewCell.m in Sources */,
@@ -546,14 +621,19 @@
 				F9122E2E1AE930C900C4D4E4 /* MyProfileTableViewController.m in Sources */,
 				F9122E341AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m in Sources */,
 				F90AEB4C1AFA9DC200D7CB34 /* ForgotPasswordViewController.m in Sources */,
+				F9B458681B04FEC500912227 /* FullSearchResultTableViewController.m in Sources */,
 				F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */,
+				F9F606121B0427B1006CAFAC /* MyPostsTableViewController.m in Sources */,
 				F9122E431AE97F3200C4D4E4 /* AddForumTopViewController.m in Sources */,
+				F9B458601B04E4D900912227 /* SearchTableViewController.m in Sources */,
 				F91FE00C1AE0444F00DC1438 /* SettingsTableViewController.m in Sources */,
 				F9A6BB601AE023DC005B873C /* ForumTopicsTableViewCell.m in Sources */,
 				F9A6BB581AE02091005B873C /* DataSource.m in Sources */,
 				F91FE0151AE0555E00DC1438 /* AddDiscussionViewController.m in Sources */,
 				F9122E4C1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m in Sources */,
 				F90AEB4F1AFAA20D00D7CB34 /* AddWhatsNewViewController.m in Sources */,
+				F9F606151B0427FC006CAFAC /* MyPostsTableViewCell.m in Sources */,
+				F96303321B03A47F0080ECB4 /* FullResponseTableViewController.m in Sources */,
 				F929F8111ADDA81700C8BE7F /* HomeViewController.m in Sources */,
 				F929F80E1ADDA81700C8BE7F /* AppDelegate.m in Sources */,
 				F9122E491AE97F6A00C4D4E4 /* AddRefArtViewController.m in Sources */,

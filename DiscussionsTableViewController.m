@@ -55,11 +55,21 @@
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Discussions", nil)];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+}
+
+- (void)reloadTableView:(NSNotification*)notification {
+    {
+        if ([[notification name] isEqualToString:@"reloadTable"])
+        {
+            [self loadObjects];
+        }
+    }
 }
 
 #pragma mark - PFQuery
@@ -88,17 +98,13 @@
             if (!error){
                 
                 [cell.userImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
-                //cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width / 2;
-                //cell.userImage.layer.masksToBounds = YES;
             }
             else {
                 NSLog(@"no data!");
             }
         }];
     }];
-    
-    //[cell.userImageButton addTarget:self action:@selector(userProfileTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
+        
     cell.discussionText.layer.cornerRadius = 8.0;
     cell.discussionText.layer.masksToBounds = YES;
     cell.discussionText.text = [[self.objects objectAtIndex:indexPath.row] objectForKey:@"DiscussionText"];
