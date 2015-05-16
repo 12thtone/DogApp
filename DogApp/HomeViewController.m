@@ -30,6 +30,8 @@
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
+    NSLog(@"%@", [[PFUser currentUser] objectForKey:@"admin"]);
+    
     if (![[PFUser currentUser] objectForKey:@"admin"] == true) {
         self.navigationItem.leftBarButtonItem = nil;
     }

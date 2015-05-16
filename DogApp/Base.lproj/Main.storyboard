@@ -765,7 +765,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="border-collie-dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jl6-Od-kdN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0250.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jl6-Od-kdN">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1067"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jl6-Od-kdN" secondAttribute="height" multiplier="600:1067" id="Nss-t9-8JD"/>
@@ -2269,8 +2269,8 @@
         <image name="CellPic2.png" width="213" height="34"/>
         <image name="IMG_0232.png" width="579" height="1020"/>
         <image name="IMG_0238.png" width="632" height="1126"/>
+        <image name="IMG_0250.png" width="362" height="634"/>
         <image name="animal-footprint.png" width="30" height="30"/>
-        <image name="border-collie-dog.png" width="296" height="482"/>
         <image name="dalmatian-dog.png" width="334" height="460"/>
         <image name="dog-embossed.png" width="1088" height="2238"/>
         <image name="dog-on-grass.png" width="272" height="477"/>
