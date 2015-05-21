@@ -60,12 +60,7 @@
         [PFUser requestPasswordResetForEmailInBackground:email];
         
         [self usernameQuery];
-        /*
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Check Your Email"
-                                                            message:@"We sent you a link to reset your password. You'll be Jokadooing soon!"
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-         */
+        
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -79,7 +74,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (PFObject *user in objects) {
             NSString *usernameString = [NSString stringWithFormat:@"%@, we sent you a link to reset your password.", [user objectForKey:@"username"]];
-            NSString *username = [NSString stringWithFormat:@"%@", [user objectForKey:@"username"]];
+            NSString *username = [NSString stringWithFormat:@"Hey, %@!", [user objectForKey:@"username"]];
             
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:username
                                                                 message:usernameString
