@@ -304,10 +304,17 @@
         <scene sceneID="fmX-MW-sUl">
             <objects>
                 <tableViewController id="X45-bR-b1E" customClass="ReferenceArticlesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="2pf-3b-z2V">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="2pf-3b-z2V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6i3-pj-dCU">
+                            <rect key="frame" x="0.0" y="-21" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.71999999999999997" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RefArtTVCell" rowHeight="109" id="d5D-aT-tOu" customClass="ReferenceArticlesTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -359,6 +366,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="topicLabel" destination="6i3-pj-dCU" id="70X-lE-qcR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtE-GF-186" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,7 +400,6 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOb-dC-2pa">
                                                     <rect key="frame" x="8" y="143" width="584" height="327"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="1" green="1" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -484,7 +493,6 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-NU-gVd">
                                                     <rect key="frame" x="8" y="143" width="584" height="328"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="1" green="1" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -659,24 +667,16 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's New?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-WK-vZA">
-                                <rect key="frame" x="16" y="339" width="568" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="85M-9o-6k9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="0.47000000000000003" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnZ-82-O5I">
-                                <rect key="frame" x="16" y="368" width="568" height="175"/>
+                                <rect key="frame" x="0.0" y="331" width="600" height="176"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.62" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitalidog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqm-lX-a54">
-                                <rect key="frame" x="16" y="269" width="568" height="62"/>
+                                <rect key="frame" x="0.0" y="269" width="600" height="62"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="zrw-QC-Snw"/>
                                 </constraints>
@@ -687,17 +687,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b5N-WK-vZA" firstAttribute="top" secondItem="Cqm-lX-a54" secondAttribute="bottom" constant="8" id="39g-iv-BNw"/>
+                            <constraint firstItem="qnZ-82-O5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2E8-kZ-c6k"/>
+                            <constraint firstItem="qnZ-82-O5I" firstAttribute="top" secondItem="Cqm-lX-a54" secondAttribute="bottom" id="CGo-FU-Kgm"/>
                             <constraint firstItem="8rP-Sd-9PG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ENZ-vh-b1p"/>
-                            <constraint firstAttribute="trailing" secondItem="b5N-WK-vZA" secondAttribute="trailing" constant="16" id="FQ4-2H-VTO"/>
                             <constraint firstItem="8rP-Sd-9PG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FXX-SM-Cmb"/>
                             <constraint firstAttribute="centerY" secondItem="Cqm-lX-a54" secondAttribute="centerY" id="HzP-bA-auh"/>
+                            <constraint firstAttribute="trailing" secondItem="Cqm-lX-a54" secondAttribute="trailing" id="KYN-dS-jsX"/>
+                            <constraint firstAttribute="trailing" secondItem="qnZ-82-O5I" secondAttribute="trailing" id="NxO-cw-aZj"/>
+                            <constraint firstItem="Cqm-lX-a54" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P8f-fi-yQo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qnZ-82-O5I" secondAttribute="bottom" constant="8" id="QNX-ve-g2c"/>
                             <constraint firstAttribute="trailing" secondItem="qnZ-82-O5I" secondAttribute="trailing" constant="16" id="Rgy-Z8-iUa"/>
-                            <constraint firstItem="b5N-WK-vZA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SWW-gw-I4l"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qnZ-82-O5I" secondAttribute="bottom" constant="44" id="T2r-9j-HYB"/>
                             <constraint firstAttribute="trailing" secondItem="8rP-Sd-9PG" secondAttribute="trailing" id="Unl-3G-0R2"/>
                             <constraint firstItem="Cqm-lX-a54" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ahi-iU-ZrB"/>
-                            <constraint firstItem="qnZ-82-O5I" firstAttribute="top" secondItem="b5N-WK-vZA" secondAttribute="bottom" constant="8" id="e6h-Qd-cKs"/>
+                            <constraint firstItem="qnZ-82-O5I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jvW-Ha-kca"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8rP-Sd-9PG" secondAttribute="bottom" id="k1Y-fx-WlJ"/>
                             <constraint firstAttribute="trailing" secondItem="Cqm-lX-a54" secondAttribute="trailing" constant="16" id="lwv-NO-OL0"/>
                             <constraint firstAttribute="trailing" secondItem="Cqm-lX-a54" secondAttribute="trailing" constant="16" id="neL-LB-J4o"/>
@@ -708,8 +711,14 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="FXX-SM-Cmb"/>
+                                <exclude reference="ahi-iU-ZrB"/>
+                                <exclude reference="lwv-NO-OL0"/>
                                 <exclude reference="neL-LB-J4o"/>
                                 <exclude reference="wDF-uc-cmW"/>
+                                <exclude reference="Rgy-Z8-iUa"/>
+                                <exclude reference="jvW-Ha-kca"/>
+                                <exclude reference="nwm-0r-mWe"/>
+                                <exclude reference="QNX-ve-g2c"/>
                                 <exclude reference="k1Y-fx-WlJ"/>
                             </mask>
                         </variation>
@@ -828,7 +837,7 @@
                                     <constraint firstAttribute="height" constant="30" id="d3B-h7-rgb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Forgot Password">
+                                <state key="normal" title="Forgot Password or Username">
                                     <color key="titleColor" red="1" green="1" blue="0.0" alpha="0.47000000000000003" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1226,6 +1235,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LBU-x6-1AT">
+                            <rect key="frame" x="0.0" y="-21" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.71999999999999997" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscussionsTVCell" rowHeight="109" id="mQJ-Hs-eKh" customClass="DiscussionsTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -1296,6 +1312,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="topicLabel" destination="LBU-x6-1AT" id="qA8-BL-Dwv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLf-kM-CA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1310,6 +1329,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iNn-kx-3p7">
+                            <rect key="frame" x="0.0" y="-21" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResponseTVCell" rowHeight="109" id="aK8-n2-ADb" customClass="ResponsesTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -1378,6 +1404,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="discussionLabel" destination="iNn-kx-3p7" id="6x7-9L-B14"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yA-PG-16P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1494,7 +1523,7 @@
                                                 <constraint firstAttribute="height" constant="20" id="svh-zf-wvy"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1657,7 +1686,6 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVn-Kw-yZh">
                                                     <rect key="frame" x="8" y="142" width="584" height="328"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" red="1" green="1" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2285,7 +2313,7 @@
         <image name="sharing-resources.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1hN-tW-5oK"/>
         <segue reference="cKf-Vc-vWf"/>
-        <segue reference="U9o-SD-jfw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,8 +34,8 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTranslucent:YES];
     
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Add Response", nil)];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:16],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", [self.discussion objectForKey:@"DiscussionText"]];
     
     UIColor *color = [UIColor blackColor];
     self.responseTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Response Headline" attributes:@{NSForegroundColorAttributeName: color}];

@@ -33,7 +33,7 @@
     [self.navigationController.navigationBar setTranslucent:YES];
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Add Discussion", nil)];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@", [self.topic objectForKey:@"topicName"]];
     
     UIColor *color = [UIColor blackColor];
     self.discussionTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"What would you like to discuss?" attributes:@{NSForegroundColorAttributeName: color}];

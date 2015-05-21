@@ -14,6 +14,7 @@
 #import "FullResponseTableViewController.h"
 
 @interface ResponsesTableViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *discussionLabel;
 
 @end
 
@@ -55,6 +56,8 @@
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Responses", nil)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
+    
+    self.discussionLabel.text = [self.discussion objectForKey:@"DiscussionText"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

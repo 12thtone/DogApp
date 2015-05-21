@@ -45,9 +45,6 @@
     
     self.navigationItem.hidesBackButton = YES;
     
-    self.newsTextView.layer.cornerRadius = 8.0;
-    self.newsTextView.layer.masksToBounds = YES;
-        
     [self setNews];
 }
 

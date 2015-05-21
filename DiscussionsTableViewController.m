@@ -15,6 +15,7 @@
 
 
 @interface DiscussionsTableViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 
 @end
 
@@ -56,6 +57,8 @@
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Discussions", nil)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
+    
+    self.topicLabel.text = [self.topic objectForKey:@"topicName"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

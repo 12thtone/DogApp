@@ -31,7 +31,7 @@
     [self.navigationController.navigationBar setTranslucent:YES];
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
-    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Forgot Password", nil)];
+    self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Forgot", nil)];
     
     [self.submitEmail addTarget:self action:@selector(submitEmail:) forControlEvents:UIControlEventTouchUpInside];
     self.submitEmail.layer.cornerRadius = 8;
@@ -59,12 +59,36 @@
         NSString *email = [self.userEmail.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [PFUser requestPasswordResetForEmailInBackground:email];
         
+        [self usernameQuery];
+        /*
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Check Your Email"
                                                             message:@"We sent you a link to reset your password. You'll be Jokadooing soon!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
+         */
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+- (PFQuery *)usernameQuery {
+    
+    PFQuery *query = [PFUser query];
+    
+    [query whereKey:@"email" equalTo:self.userEmail.text];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for (PFObject *user in objects) {
+            NSString *usernameString = [NSString stringWithFormat:@"%@, we sent you a link to reset your password.", [user objectForKey:@"username"]];
+            NSString *username = [NSString stringWithFormat:@"%@", [user objectForKey:@"username"]];
+            
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:username
+                                                                message:usernameString
+                                                               delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+        }
+    }];
+    
+    return query;
 }
 
 - (IBAction)cancel:(UIBarButtonItem *)sender {
