@@ -36,7 +36,7 @@
     self.navigationItem.title = [NSString stringWithFormat:@"%@", [self.topic objectForKey:@"topicName"]];
     
     UIColor *color = [UIColor blackColor];
-    self.discussionTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"What would you like to discuss?" attributes:@{NSForegroundColorAttributeName: color}];
+    self.discussionTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Brief Discussion Topic" attributes:@{NSForegroundColorAttributeName: color}];
     
     UITapGestureRecognizer *tapDismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapDismissKeyboard];

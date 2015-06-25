@@ -19,4 +19,8 @@
 
 -(BOOL)filterForProfanity:(NSString *)text;
 
+- (NSString *)rulesString;
+- (NSString *)eulaString;
+- (NSString *)privacyString;
+
 @end

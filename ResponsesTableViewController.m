@@ -91,6 +91,11 @@
     
     ResponsesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseTVCell" forIndexPath:indexPath];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userProfileTapped:)];
+    [tap setNumberOfTapsRequired:1];
+    tap.enabled = YES;
+    [cell.userImage addGestureRecognizer:tap];
+    
     PFUser *user = [self.objects objectAtIndex:indexPath.row][@"author"];
     [user fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         cell.usernameLabel.text = [object objectForKey:@"username"];
@@ -99,7 +104,7 @@
         [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error){
                 
-                [cell.userImageButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
+                [cell.userImage setImage:[UIImage imageWithData:data]];
             }
             else {
                 NSLog(@"no data!");
@@ -144,6 +149,19 @@
         FullResponseTableViewController *fullResponseTableViewController = (FullResponseTableViewController *)segue.destinationViewController;
         fullResponseTableViewController.response = object;
     }
+}
+
+- (void)userProfileTapped:(UITapGestureRecognizer *)sender {
+    
+    CGPoint tapLocation = [sender locationInView:self.tableView];
+    NSIndexPath *tapIndexPath = [self.tableView indexPathForRowAtPoint:tapLocation];
+    
+    PFUser *object = [[self.objects objectAtIndex:tapIndexPath.row] objectForKey:@"author"];
+    UserProfileTableViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"viewProfile"];
+    profileVC.userToProfile = object;
+    
+    [self.navigationController pushViewController:profileVC animated:YES];
+    
 }
 
 @end

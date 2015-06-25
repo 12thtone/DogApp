@@ -13,10 +13,10 @@
 @interface AddRefTopViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *referenceTopicName;
 @property (strong, nonatomic) IBOutlet UIImageView *topicImage;
-- (IBAction)imageLibrary:(id)sender;
+//- (IBAction)imageLibrary:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
-- (IBAction)imageCamera:(id)sender;
+//- (IBAction)imageCamera:(id)sender;
 
 @property (nonatomic, strong) NSString *topicString;
 @property (weak, nonatomic) UIImage *chosenImage;
@@ -65,11 +65,6 @@
                                                             message:@"Must be 11 characters or less."
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
-    } else if (!self.chosenImage) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                            message:@"Please choose an image."
-                                                           delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
     } else {
         
         if ([[DataSource sharedInstance] filterForProfanity:self.topicString] == NO) {
@@ -92,7 +87,9 @@
 
 - (void)saveTopic
 {    
-    NSData *imageData = UIImageJPEGRepresentation(self.chosenImage, 0.0f);
+    //NSData *imageData = UIImageJPEGRepresentation(self.chosenImage, 0.0f);
+    NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"FurLong.png"], 0.0f);
+    //NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"placeholder.png"]);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     
     PFObject *newTopic = [PFObject objectWithClassName:@"ReferenceTopics"];
@@ -113,7 +110,7 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+/*
 #pragma mark - Images
 
 - (IBAction)imageLibrary:(id)sender {
@@ -161,5 +158,5 @@
         [self presentViewController:picker animated:YES completion:NULL];
     }
 }
-
+*/
 @end
