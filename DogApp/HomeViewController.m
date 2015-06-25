@@ -5,6 +5,7 @@
 //  Created by Matt Maher on 4/14/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
+// This is a private application. Use of any code is forbidden
 
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
