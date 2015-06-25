@@ -10,7 +10,8 @@
 
 @interface DiscussionsTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIButton *userImageButton;
-@property (strong, nonatomic) IBOutlet UIButton *userImage;
+//@property (strong, nonatomic) IBOutlet UIButton *userImage;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @property (strong, nonatomic) IBOutlet UILabel *discussionText;
 @property (strong, nonatomic) IBOutlet UILabel *username;
 

@@ -30,6 +30,8 @@
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
+    NSLog(@"%@", [[PFUser currentUser] objectForKey:@"admin"]);
+    
     if (![[PFUser currentUser] objectForKey:@"admin"] == true) {
         self.navigationItem.leftBarButtonItem = nil;
     }
@@ -43,9 +45,6 @@
     
     self.navigationItem.hidesBackButton = YES;
     
-    self.newsTextView.layer.cornerRadius = 8.0;
-    self.newsTextView.layer.masksToBounds = YES;
-        
     [self setNews];
 }
 
