@@ -35,11 +35,11 @@
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Full Article", nil)];
     
     if (![[PFUser currentUser] objectForKey:@"admin"] == true) {
-        self.editArticle = nil;
+        self.editArticle.hidden = YES;
+    } else {
+        self.editArticle.layer.cornerRadius = 8;
+        self.editArticle.layer.masksToBounds = YES;
     }
-    
-    self.editArticle.layer.cornerRadius = 8;
-    self.editArticle.layer.masksToBounds = YES;
     
     [self.article fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         PFFile *pictureFile = [self.article objectForKey:@"picture"];
