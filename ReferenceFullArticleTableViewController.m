@@ -8,8 +8,10 @@
 
 #import "ReferenceFullArticleTableViewController.h"
 #import <Parse/Parse.h>
+#import "EditArticleViewController.h"
 
 @interface ReferenceFullArticleTableViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *editArticle;
 @property (strong, nonatomic) IBOutlet UIImageView *fullArtImage;
 @property (strong, nonatomic) IBOutlet UILabel *fullArtTitle;
 @property (strong, nonatomic) IBOutlet UITextView *fullArtText;
@@ -31,6 +33,13 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"HelveticaNeue-Light" size:22],NSFontAttributeName, [UIColor blackColor], NSForegroundColorAttributeName, nil]];
     self.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"Full Article", nil)];
+    
+    if (![[PFUser currentUser] objectForKey:@"admin"] == true) {
+        self.editArticle = nil;
+    }
+    
+    self.editArticle.layer.cornerRadius = 8;
+    self.editArticle.layer.masksToBounds = YES;
     
     [self.article fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         PFFile *pictureFile = [self.article objectForKey:@"picture"];
@@ -75,4 +84,18 @@
         [activityVC setValue:@"Vitalidog" forKey:@"subject"];
     }
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"editArticle"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        EditArticleViewController *editArticleViewController = (EditArticleViewController *)segue.destinationViewController;
+        NSLog(@"%@", self.article);
+        editArticleViewController.article = self.article;
+    }
+}
+
 @end

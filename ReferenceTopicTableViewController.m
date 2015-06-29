@@ -79,7 +79,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
-    [query orderByDescending:@"topicName"];
+    [query orderByDescending:@"createdAt"];
     
     return query;
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C0441901B3B6F9C008414B3 /* FurLong.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C04418F1B3B6F9C008414B3 /* FurLong.png */; };
+		2C738BCD1B40BBB5003CE9A9 /* EditArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C738BCC1B40BBB5003CE9A9 /* EditArticleViewController.m */; };
 		F9059C7C1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7B1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png */; };
 		F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */; };
 		F9059C811ADEEFB500D6BCF4 /* CellPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */; };
@@ -104,6 +105,8 @@
 
 /* Begin PBXFileReference section */
 		2C04418F1B3B6F9C008414B3 /* FurLong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FurLong.png; sourceTree = "<group>"; };
+		2C738BCB1B40BBB5003CE9A9 /* EditArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditArticleViewController.h; sourceTree = "<group>"; };
+		2C738BCC1B40BBB5003CE9A9 /* EditArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditArticleViewController.m; sourceTree = "<group>"; };
 		F9059C7B1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-pretty-dog_w725_h544.png"; sourceTree = "<group>"; };
 		F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic1.png; sourceTree = "<group>"; };
 		F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic2.png; sourceTree = "<group>"; };
@@ -325,6 +328,8 @@
 			children = (
 				F9122E4A1AE97F7C00C4D4E4 /* AddRefFullArtViewController.h */,
 				F9122E4B1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m */,
+				2C738BCB1B40BBB5003CE9A9 /* EditArticleViewController.h */,
+				2C738BCC1B40BBB5003CE9A9 /* EditArticleViewController.m */,
 				F9122E471AE97F6A00C4D4E4 /* AddRefArtViewController.h */,
 				F9122E481AE97F6A00C4D4E4 /* AddRefArtViewController.m */,
 				F9122E441AE97F5100C4D4E4 /* AddRefTopViewController.h */,
@@ -624,6 +629,7 @@
 				F9122E3D1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m in Sources */,
 				F9122E2E1AE930C900C4D4E4 /* MyProfileTableViewController.m in Sources */,
 				F9122E341AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m in Sources */,
+				2C738BCD1B40BBB5003CE9A9 /* EditArticleViewController.m in Sources */,
 				F90AEB4C1AFA9DC200D7CB34 /* ForgotPasswordViewController.m in Sources */,
 				F9B458681B04FEC500912227 /* FullSearchResultTableViewController.m in Sources */,
 				F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */,
