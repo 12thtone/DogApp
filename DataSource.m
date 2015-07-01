@@ -38,7 +38,7 @@
 
 -(BOOL)filterForProfanity:(NSString *)text {
     
-    NSArray *listOfProfaneWords = @[@"ballsack", @"bastard", @"blowjob", @"blow job",	@"boner", @"buttplug", @"clitoris", @"cock", @"cunt", @"damn", @"dick", @"dildo", @"dyke", @"fag", @"fellatio", @"felch", @"fuck", @"f u c k", @"fudgepacker", @"fudge packer", @"Goddamn", @"God damn", @"homo", @"jizz", @"labia", @"muff", @"nigger", @"nigga", @"penis", @"pussy",	@"queer", @"scrotum", @"sex", @"shit", @"slut", @"smegma", @"twat", @"vagina", @"whore"];
+    NSArray *listOfProfaneWords = @[@"ballsack", @"bastard", @"blowjob", @"blow job",	@"boner", @"buttplug", @"clitoris", @"cock", @"cunt", @"damn", @"dick", @"dildo", @"dyke", @"fag", @"fellatio", @"felch", @"fuck", @"f u c k", @"fudgepacker", @"fudge packer", @"Goddamn", @"God damn", @"homo", @"jizz", @"labia", @"muff", @"nigger", @"nigga", @"penis", @"pussy",	@"queer", @"scrotum", @"sex", @"shit", @"slut", @"smegma", @"twat", @"vagina", @"whore", @"vdog"];
     
     NSArray *testText = [NSArray arrayWithObject:text];
     
