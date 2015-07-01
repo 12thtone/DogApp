@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *articleTitle;
 @property (strong, nonatomic) IBOutlet UITextView *articleText;
 @property (strong, nonatomic) IBOutlet UIImageView *articleImage;
+- (IBAction)camera:(id)sender;
 - (IBAction)imageLibrary:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
@@ -129,7 +130,7 @@
     
 }
 
-#pragma mark - Image Library
+#pragma mark - Images
 
 - (IBAction)imageLibrary:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -154,6 +155,27 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+}
+
+- (IBAction)camera:(UIBarButtonItem *)sender {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                              message:@"This device has no camera."
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
 }
 
 @end
