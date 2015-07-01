@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "ReferenceArticlesTableViewCell.h"
 #import "AddRefArtViewController.h"
-#import "ReferenceFullArticleTableViewController.h"
+#import "ReferenceFullArticleViewController.h"
 
 @interface ReferenceArticlesTableViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
@@ -129,8 +129,8 @@
     if ([segue.identifier isEqualToString:@"showArticle"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        ReferenceFullArticleTableViewController *referenceFullArticleTableViewController = (ReferenceFullArticleTableViewController *)segue.destinationViewController;
-        referenceFullArticleTableViewController.article = object;
+        ReferenceFullArticleViewController *referenceFullArticleViewController = (ReferenceFullArticleViewController *)segue.destinationViewController;
+        referenceFullArticleViewController.article = object;
     }
 }
 

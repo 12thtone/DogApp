@@ -11,7 +11,7 @@
 #import "ResponsesTableViewCell.h"
 #import <Parse/Parse.h>
 #import "UserProfileTableViewController.h"
-#import "FullResponseTableViewController.h"
+#import "FullResponseViewController.h"
 
 @interface ResponsesTableViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *discussionLabel;
@@ -146,8 +146,8 @@
     if ([segue.identifier isEqualToString:@"showResponse"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        FullResponseTableViewController *fullResponseTableViewController = (FullResponseTableViewController *)segue.destinationViewController;
-        fullResponseTableViewController.response = object;
+        FullResponseViewController *fullResponseViewController = (FullResponseViewController *)segue.destinationViewController;
+        fullResponseViewController.response = object;
     }
 }
 

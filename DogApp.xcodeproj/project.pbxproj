@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C0441901B3B6F9C008414B3 /* FurLong.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C04418F1B3B6F9C008414B3 /* FurLong.png */; };
 		2C738BCD1B40BBB5003CE9A9 /* EditArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C738BCC1B40BBB5003CE9A9 /* EditArticleViewController.m */; };
+		2C75FE251B4465EE00971218 /* FullResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C75FE241B4465EE00971218 /* FullResponseViewController.m */; };
+		2C75FE281B446A8F00971218 /* ReferenceFullArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C75FE271B446A8F00971218 /* ReferenceFullArticleViewController.m */; };
 		F9059C7C1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7B1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png */; };
 		F9059C801ADEEFB500D6BCF4 /* CellPic1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */; };
 		F9059C811ADEEFB500D6BCF4 /* CellPic2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */; };
@@ -27,7 +29,6 @@
 		F9122E371AE975F300C4D4E4 /* ReferenceTopicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E361AE975F300C4D4E4 /* ReferenceTopicTableViewCell.m */; };
 		F9122E3A1AE9762300C4D4E4 /* ReferenceArticlesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E391AE9762300C4D4E4 /* ReferenceArticlesTableViewController.m */; };
 		F9122E3D1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E3C1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m */; };
-		F9122E401AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E3F1AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.m */; };
 		F9122E431AE97F3200C4D4E4 /* AddForumTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E421AE97F3200C4D4E4 /* AddForumTopViewController.m */; };
 		F9122E461AE97F5100C4D4E4 /* AddRefTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E451AE97F5100C4D4E4 /* AddRefTopViewController.m */; };
 		F9122E491AE97F6A00C4D4E4 /* AddRefArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9122E481AE97F6A00C4D4E4 /* AddRefArtViewController.m */; };
@@ -66,7 +67,6 @@
 		F95CE7821ADFFD7F003DC96F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95CE7811ADFFD7F003DC96F /* ParseUI.framework */; };
 		F95CE7861AE004AF003DC96F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7851AE004AF003DC96F /* LoginViewController.m */; };
 		F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F95CE7881AE0197F003DC96F /* NewAccountViewController.m */; };
-		F96303321B03A47F0080ECB4 /* FullResponseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */; };
 		F96303441B03C3640080ECB4 /* IMG_0238.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303431B03C3640080ECB4 /* IMG_0238.png */; };
 		F96303461B03C3C70080ECB4 /* IMG_0250.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303451B03C3C70080ECB4 /* IMG_0250.png */; };
 		F96303481B03C46F0080ECB4 /* IMG_0245-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F96303471B03C46F0080ECB4 /* IMG_0245-1.png */; };
@@ -107,6 +107,10 @@
 		2C04418F1B3B6F9C008414B3 /* FurLong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FurLong.png; sourceTree = "<group>"; };
 		2C738BCB1B40BBB5003CE9A9 /* EditArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditArticleViewController.h; sourceTree = "<group>"; };
 		2C738BCC1B40BBB5003CE9A9 /* EditArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditArticleViewController.m; sourceTree = "<group>"; };
+		2C75FE231B4465EE00971218 /* FullResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullResponseViewController.h; sourceTree = "<group>"; };
+		2C75FE241B4465EE00971218 /* FullResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullResponseViewController.m; sourceTree = "<group>"; };
+		2C75FE261B446A8F00971218 /* ReferenceFullArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceFullArticleViewController.h; sourceTree = "<group>"; };
+		2C75FE271B446A8F00971218 /* ReferenceFullArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceFullArticleViewController.m; sourceTree = "<group>"; };
 		F9059C7B1ADEC5A800D6BCF4 /* white-pretty-dog_w725_h544.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-pretty-dog_w725_h544.png"; sourceTree = "<group>"; };
 		F9059C7D1ADEEFB500D6BCF4 /* CellPic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic1.png; sourceTree = "<group>"; };
 		F9059C7E1ADEEFB500D6BCF4 /* CellPic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellPic2.png; sourceTree = "<group>"; };
@@ -133,8 +137,6 @@
 		F9122E391AE9762300C4D4E4 /* ReferenceArticlesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceArticlesTableViewController.m; sourceTree = "<group>"; };
 		F9122E3B1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceArticlesTableViewCell.h; sourceTree = "<group>"; };
 		F9122E3C1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceArticlesTableViewCell.m; sourceTree = "<group>"; };
-		F9122E3E1AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceFullArticleTableViewController.h; sourceTree = "<group>"; };
-		F9122E3F1AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceFullArticleTableViewController.m; sourceTree = "<group>"; };
 		F9122E411AE97F3200C4D4E4 /* AddForumTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddForumTopViewController.h; sourceTree = "<group>"; };
 		F9122E421AE97F3200C4D4E4 /* AddForumTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddForumTopViewController.m; sourceTree = "<group>"; };
 		F9122E441AE97F5100C4D4E4 /* AddRefTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRefTopViewController.h; sourceTree = "<group>"; };
@@ -189,8 +191,6 @@
 		F95CE7851AE004AF003DC96F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F95CE7871AE0197F003DC96F /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountViewController.h; sourceTree = "<group>"; };
 		F95CE7881AE0197F003DC96F /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountViewController.m; sourceTree = "<group>"; };
-		F96303301B03A47F0080ECB4 /* FullResponseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullResponseTableViewController.h; sourceTree = "<group>"; };
-		F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullResponseTableViewController.m; sourceTree = "<group>"; };
 		F96303431B03C3640080ECB4 /* IMG_0238.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0238.png; sourceTree = "<group>"; };
 		F96303451B03C3C70080ECB4 /* IMG_0250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0250.png; sourceTree = "<group>"; };
 		F96303471B03C46F0080ECB4 /* IMG_0245-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMG_0245-1.png"; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		F9122E4E1AE97FE300C4D4E4 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
-				F96303301B03A47F0080ECB4 /* FullResponseTableViewController.h */,
-				F96303311B03A47F0080ECB4 /* FullResponseTableViewController.m */,
+				2C75FE231B4465EE00971218 /* FullResponseViewController.h */,
+				2C75FE241B4465EE00971218 /* FullResponseViewController.m */,
 				F9FB5A1F1AE13DB700CA24EE /* AddResponseViewController.h */,
 				F9FB5A201AE13DB700CA24EE /* AddResponseViewController.m */,
 				F9FB5A1C1AE13D8300CA24EE /* ResponsesTableViewCell.h */,
@@ -308,8 +308,8 @@
 		F9122E4F1AE97FED00C4D4E4 /* Reference */ = {
 			isa = PBXGroup;
 			children = (
-				F9122E3E1AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.h */,
-				F9122E3F1AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.m */,
+				2C75FE261B446A8F00971218 /* ReferenceFullArticleViewController.h */,
+				2C75FE271B446A8F00971218 /* ReferenceFullArticleViewController.m */,
 				F9122E3B1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.h */,
 				F9122E3C1AE9763500C4D4E4 /* ReferenceArticlesTableViewCell.m */,
 				F9122E381AE9762300C4D4E4 /* ReferenceArticlesTableViewController.h */,
@@ -614,7 +614,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91FE00F1AE04A9D00DC1438 /* DiscussionsTableViewController.m in Sources */,
-				F9122E401AE9768900C4D4E4 /* ReferenceFullArticleTableViewController.m in Sources */,
 				F9A6BB5D1AE023B8005B873C /* ForumTopicsTableViewController.m in Sources */,
 				F9122E3A1AE9762300C4D4E4 /* ReferenceArticlesTableViewController.m in Sources */,
 				F9122E461AE97F5100C4D4E4 /* AddRefTopViewController.m in Sources */,
@@ -631,6 +630,7 @@
 				F9122E341AE975DD00C4D4E4 /* ReferenceTopicTableViewController.m in Sources */,
 				2C738BCD1B40BBB5003CE9A9 /* EditArticleViewController.m in Sources */,
 				F90AEB4C1AFA9DC200D7CB34 /* ForgotPasswordViewController.m in Sources */,
+				2C75FE281B446A8F00971218 /* ReferenceFullArticleViewController.m in Sources */,
 				F9B458681B04FEC500912227 /* FullSearchResultTableViewController.m in Sources */,
 				F95CE7891AE0197F003DC96F /* NewAccountViewController.m in Sources */,
 				F9F606121B0427B1006CAFAC /* MyPostsTableViewController.m in Sources */,
@@ -641,9 +641,9 @@
 				F9A6BB581AE02091005B873C /* DataSource.m in Sources */,
 				F91FE0151AE0555E00DC1438 /* AddDiscussionViewController.m in Sources */,
 				F9122E4C1AE97F7C00C4D4E4 /* AddRefFullArtViewController.m in Sources */,
+				2C75FE251B4465EE00971218 /* FullResponseViewController.m in Sources */,
 				F90AEB4F1AFAA20D00D7CB34 /* AddWhatsNewViewController.m in Sources */,
 				F9F606151B0427FC006CAFAC /* MyPostsTableViewCell.m in Sources */,
-				F96303321B03A47F0080ECB4 /* FullResponseTableViewController.m in Sources */,
 				F929F8111ADDA81700C8BE7F /* HomeViewController.m in Sources */,
 				F929F80E1ADDA81700C8BE7F /* AppDelegate.m in Sources */,
 				F9122E491AE97F6A00C4D4E4 /* AddRefArtViewController.m in Sources */,

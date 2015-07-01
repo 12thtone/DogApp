@@ -53,6 +53,8 @@
                 
                 self.articleTitle.text = [self.article objectForKey:@"articleTitle"];
                 self.articleText.text = [self.article objectForKey:@"articleText"];
+                
+                self.chosenImage = self.articleImage.image;
             }
             else {
                 NSLog(@"no data!");
@@ -60,7 +62,7 @@
         }];
     }];
     
-    self.chosenImage = self.articleImage.image;
+    //self.chosenImage = self.articleImage.image;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,16 +1,16 @@
 //
-//  ReferenceFullArticleTableViewController.m
+//  ReferenceFullArticleViewController.m
 //  DogApp
 //
-//  Created by Matt Maher on 4/23/15.
+//  Created by Matthew Maher on 7/1/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
 
-#import "ReferenceFullArticleTableViewController.h"
+#import "ReferenceFullArticleViewController.h"
 #import <Parse/Parse.h>
 #import "EditArticleViewController.h"
 
-@interface ReferenceFullArticleTableViewController ()
+@interface ReferenceFullArticleViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *editArticle;
 @property (strong, nonatomic) IBOutlet UIImageView *fullArtImage;
 @property (strong, nonatomic) IBOutlet UILabel *fullArtTitle;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ReferenceFullArticleTableViewController
+@implementation ReferenceFullArticleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

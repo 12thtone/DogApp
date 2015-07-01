@@ -1,16 +1,16 @@
 //
-//  FullResponseTableViewController.m
+//  FullResponseViewController.m
 //  DogApp
 //
-//  Created by Matt Maher on 5/13/15.
+//  Created by Matthew Maher on 7/1/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
 
-#import "FullResponseTableViewController.h"
+#import "FullResponseViewController.h"
 #import <Parse/Parse.h>
 #import <MessageUI/MessageUI.h>
 
-@interface FullResponseTableViewController () <MFMailComposeViewControllerDelegate>
+@interface FullResponseViewController () <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageProfile;
 @property (strong, nonatomic) IBOutlet UILabel *fullRespHeadline;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation FullResponseTableViewController
+@implementation FullResponseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
