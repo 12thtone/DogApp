@@ -58,7 +58,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:@"reloadTable" object:nil];
     
-    self.topicLabel.text = [self.topic objectForKey:@"topicName"];
+    self.topicLabel.text = @"The Latest Discussions on Vitalidog!";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -80,7 +80,7 @@
 - (PFQuery *)queryForTable {
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    [query whereKey:@"DiscussionTopic" equalTo:self.topic];
+    //[query whereKey:@"DiscussionTopic" equalTo:self.topic];
     [query orderByDescending:@"createdAt"];
     
     return query;

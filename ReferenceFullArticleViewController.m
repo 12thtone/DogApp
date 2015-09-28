@@ -5,6 +5,7 @@
 //  Created by Matthew Maher on 7/1/15.
 //  Copyright (c) 2015 Matt Maher. All rights reserved.
 //
+// Version test
 
 #import "ReferenceFullArticleViewController.h"
 #import <Parse/Parse.h>
@@ -68,7 +69,7 @@
 
 - (IBAction)shareArticle:(id)sender {
     
-    NSString *messageBody = [NSString stringWithFormat:@"%@ found an article for you on Vitalidog!\n\n%@\n\nTo view this article, and tons more like it, download Vitalidog!\n\nhttp://www.12thtone.com", [[PFUser currentUser] username], [self.article objectForKey:@"articleText"]];
+    NSString *messageBody = [NSString stringWithFormat:@"%@ found an article for you on Vitalidog!\n\n%@\n\nTo view this article, and tons more like it, download Vitalidog!\n\nhttps://itunes.apple.com/gw/app/vitalidog/id1015432208?mt=8, or visit Vitalidog.com!", [[PFUser currentUser] username], [self.article objectForKey:@"articleText"]];
     
     NSMutableArray *articleToShare = [NSMutableArray array];
     [articleToShare addObject:messageBody];
